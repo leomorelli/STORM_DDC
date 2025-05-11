@@ -1,1 +1,9 @@
+The files are output from the 3d random example data with min_loc = 2000.
+I save all the variables that should be the output of the splitting codes.
 
+All variables are scalar in 1D array, except:
+1. TrueLocalization and LocalizationFinal, which are Cell(per image) -> 2D array (contains x, y,z). 
+I extract x,y,z from each image and stack in in column manner, which means cell 1 for column 1,2,3; cell 2 for culumn 4,5,6 and so on. 
+The extraction is quite messy since each images have different number of localizations, thus I put NaN value for non existing data since I need to create number of matrix by max row number
+
+2. Parameters to split, it contains cell -> 1D array(2 or 3 values). Each value have space as delimiter while each cells use tab as delimiter.

@@ -75,7 +75,10 @@ end
   %%% END OF CHUNK 1 --> store the first intermidiate file here
 
 %Here we will go through an actually split up the images so that
-%approximatly min_loc is within each image.
+%approximatly min_loc is within each image.   
+
+% 12/05/2025 Leo starts here
+
 counter=0;
 temp_numb_of_loc=[];
 addonarray=[];
@@ -184,7 +187,9 @@ for ksu=1:length(Frame_Information)
     end
     
     
-    
+    % 12/05/2025 Leo ends here --> randomization part
+
+
     
 
     addont=addon;

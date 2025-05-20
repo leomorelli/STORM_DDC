@@ -1,0 +1,26 @@
+run_script_DDC
+├── Run_cluster                          (loads and prepares input data)
+│   └── (no function calls)
+│
+├── Determine_Blinking_Distribution5    (computes blinking distributions)
+│   └── (no function calls)
+│
+├── DDC_MCMC                             (core blinking elimination + MCMC loop)
+│   ├── Make_Distance_Matrix_Individual
+│   │   └── (no function calls)
+│   ├── Determine_Deviation_in_Probability8
+│   │   └── Eliminate_Blinking_De_Loc15_MCMC
+│   │       └── (no function calls)
+│   ├── PALMplot
+│   │   └── (no function calls)
+│   ├── Calculate_Score_8 (script-style, uses workspace vars)
+│   │   └── (no function calls)
+│   ├── Determine_Locs_w_Multi2 (script-style)
+│   │   └── (no function calls)
+│   ├── Density_Calc (script-style)
+│   │   └── (no function calls)
+│   └── Eliminate_Blinking_De_Loc15
+│       └── (no function calls)
+
+PALMplot is useful only if we know the ground truth. 
+I think we still need to translate this to evaluate the codes result to compare with Matlab result.

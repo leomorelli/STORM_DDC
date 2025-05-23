@@ -8,7 +8,7 @@ run_script_DDC
 ├── DDC_MCMC                             (core blinking elimination + MCMC loop)
 │   ├── Make_Distance_Matrix_Individual
 │   │   └── (no function calls)
-│   ├── Determine_Deviation_in_Probability8
+│   ├── Determine_Deviation_in_Probability8 (Ongoing, I will start working from this branch)
 │   │   └── Eliminate_Blinking_De_Loc15_MCMC
 │   │       └── (no function calls)
 │   ├── PALMplot

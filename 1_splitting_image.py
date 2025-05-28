@@ -13,15 +13,6 @@ from numpy import ceil, quantile
 from mpl_toolkits.mplot3d import Axes3D  # Required for 3D plotting
 from scipy.io import savemat
 
-def make_into_cell(arr: np.ndarray) -> np.ndarray:
-    """Put an array inside an array to consider it a cell in .mat."""
-    container: np.ndarray = np.empty((1, 1), dtype=object)
-    container[0, 0] = arr
-    return container
-
-
-
-
 
 
 #### 1) LOAD DATA ####
@@ -99,12 +90,6 @@ Condition = filename_only
 
 
 
-len(TrueLocalizations)
-TrueLocalizations
-TrueLocalizations.shape[1] == 2
-
-
-
 # If photons cell does not exist, generate one
 if len(Photons) == 0 or Photons is None:
     Photons = []  # reinitialize as an empty list
@@ -126,7 +111,6 @@ addonarray = []
 cut1array = []
 cut2array = []
 cut3array = []
-
 
 
 
@@ -295,120 +279,120 @@ for ksu in range(len(Frame_Information)):
         
                     temp_numb_of_loc.append(np.sum(mask))
 
-    ## This block scores each trial split and retains the best (lowest-score) configuration.
-    
-    # min_loc is likely a predefined scalar target for the ideal number of localizations per region.
-    # Resid stores the deviation from that ideal.
-    # Calculates mean squared error of how far the observed region counts are from the ideal.
-    Resid = np.array(temp_numb_of_loc) - min_loc
-    score = np.sum(Resid ** 2) / len(temp_numb_of_loc)
-    
-    if score < scorefinal:
-        scorefinal = score
-        ppf = pp
-        ppf2 = pp2
-        ppf3 = pp3
-        onwers = -onwers
-        temp_numb_of_locf = temp_numb_of_loc.copy()
+        ## This block scores each trial split and retains the best (lowest-score) configuration.
+        
+        # min_loc is likely a predefined scalar target for the ideal number of localizations per region.
+        # Resid stores the deviation from that ideal.
+        # Calculates mean squared error of how far the observed region counts are from the ideal.
+        Resid = np.array(temp_numb_of_loc) - min_loc
+        score = np.sum(Resid ** 2) / len(temp_numb_of_loc)
+        
+        if score < scorefinal:
+            scorefinal = score
+            ppf = pp
+            ppf2 = pp2
+            ppf3 = pp3
+            onwers = -onwers
+            temp_numb_of_locf = temp_numb_of_loc.copy()
 
 
-addont = addon  
+    addont = addon  
 
-# Use the best-found splitting parameters
-pp = ppf
-pp2 = ppf2
-pp3 = ppf3
-
-# If not enough points, skip splitting
-if len(X1) < min_loc:
-    ppf = 1
-    ppf2 = 1
-    ppf3 = 1
-
+    # Use the best-found splitting parameters
     pp = ppf
     pp2 = ppf2
     pp3 = ppf3
 
-flag = 0
+    # If not enough points, skip splitting
+    if len(X1) < min_loc:
+        ppf = 1
+        ppf2 = 1
+        ppf3 = 1
+
+        pp = ppf
+        pp2 = ppf2
+        pp3 = ppf3
+
+    flag = 0
 
 
-### 2b) apply splitting parameters
-for i in range(1, int(np.ceil(1 / pp)) + 1):
-    if flag == 1:
-        break
+    ### 2b) apply splitting parameters
+    for i in range(1, int(np.ceil(1 / pp)) + 1):
+        if flag == 1:
+            break
 
-    cut1 = np.quantile(X1, [(i - 1) * pp, min(i * pp, 1)])
+        cut1 = np.quantile(X1, [(i - 1) * pp, min(i * pp, 1)])
 
-    for ii in range(1, int(np.ceil(1 / pp2)) + 1):
-        cut2 = np.quantile(X2, [(ii - 1) * pp2, min(ii * pp2, 1)])
+        for ii in range(1, int(np.ceil(1 / pp2)) + 1):
+            cut2 = np.quantile(X2, [(ii - 1) * pp2, min(ii * pp2, 1)])
 
-        for iii in range(1, int(np.ceil(1 / pp3)) + 1):
-            cut3 = np.quantile(X3, [(iii - 1) * pp3, min(iii * pp3, 1)])
-            addon = addont
+            for iii in range(1, int(np.ceil(1 / pp3)) + 1):
+                cut3 = np.quantile(X3, [(iii - 1) * pp3, min(iii * pp3, 1)])
+                addon = addont
 
-            if len(X1) > min_loc:
-                while True:
+                if len(X1) > min_loc:
+                    while True:
+                        mask = (
+                            (X1 > cut1[0] - addon) & (X1 < cut1[1] + addon) &
+                            (X2 > cut2[0] - addon) & (X2 < cut2[1] + addon) &
+                            (X3 >= cut3[0] - addon) & (X3 <= cut3[1] + addon)
+                        )
+                        IND = np.where(mask)[0]
+                        if len(IND) >= min_loc:
+                            break
+                        addon += 10
+                else:
+                    IND = np.arange(len(X1))
+
+                while len(IND) > min_loc:
+                    addon -= 10
                     mask = (
                         (X1 > cut1[0] - addon) & (X1 < cut1[1] + addon) &
                         (X2 > cut2[0] - addon) & (X2 < cut2[1] + addon) &
                         (X3 >= cut3[0] - addon) & (X3 <= cut3[1] + addon)
                     )
                     IND = np.where(mask)[0]
-                    if len(IND) >= min_loc:
+                    if addon < 150:
                         break
-                    addon += 10
-            else:
-                IND = np.arange(len(X1))
 
-            while len(IND) > min_loc:
-                addon -= 10
-                mask = (
-                    (X1 > cut1[0] - addon) & (X1 < cut1[1] + addon) &
-                    (X2 > cut2[0] - addon) & (X2 < cut2[1] + addon) &
-                    (X3 >= cut3[0] - addon) & (X3 <= cut3[1] + addon)
-                )
-                IND = np.where(mask)[0]
-                if addon < 150:
+                if TrueLocalizations[ksu] is not None:
+                    X1t, X2t, X3t = TrueLocalizations[ksu].T
+                    maskt = (
+                        (X1t > cut1[0] - addon) & (X1t < cut1[1] + addon) &
+                        (X2t > cut2[0] - addon) & (X2t < cut2[1] + addon) &
+                        (X3t >= cut3[0] - addon) & (X3t <= cut3[1] + addon)
+                    )
+                    INDt = np.where(maskt)[0]
+
+                # Plot
+                fig = plt.figure(1)
+                ax = fig.add_subplot(111, projection='3d')
+                ax.scatter(X1[IND], X2[IND], X3[IND], c=X4[IND], s=10, cmap='jet')
+                ax.set_box_aspect([1, 1, 1])
+                plt.draw()
+                plt.pause(0.5)
+                plt.clf()
+
+                # Save results
+                LocalizationsFinal_Split.append(np.column_stack((X1[IND], X2[IND], X3[IND])))
+                Photons_Split.append(Photons[ksu][IND])
+                if TrueLocalizations[ksu] is not None:
+                    TrueLocalizations_Split.append(np.column_stack((X1t[INDt], X2t[INDt], X3t[INDt])))
+
+                cut1array.append(cut1)
+                cut2array.append(cut2)
+                cut3array.append(cut3)
+                Frame_Information_Split.append(X4[IND])
+                Came_from_image.append(ksu)
+                Parameters_to_split.append([ppf, ppf2, ppf3])
+                addonarray.append(addon)
+                temp_numb_of_loc.append(len(IND))
+
+                counter += 1
+
+                if len(X1) < min_loc:
+                    flag = 1
                     break
-
-            if TrueLocalizations[ksu] is not None:
-                X1t, X2t, X3t = TrueLocalizations[ksu].T
-                maskt = (
-                    (X1t > cut1[0] - addon) & (X1t < cut1[1] + addon) &
-                    (X2t > cut2[0] - addon) & (X2t < cut2[1] + addon) &
-                    (X3t >= cut3[0] - addon) & (X3t <= cut3[1] + addon)
-                )
-                INDt = np.where(maskt)[0]
-
-            # Plot
-            fig = plt.figure(1)
-            ax = fig.add_subplot(111, projection='3d')
-            ax.scatter(X1[IND], X2[IND], X3[IND], c=X4[IND], s=10, cmap='jet')
-            ax.set_box_aspect([1, 1, 1])
-            plt.draw()
-            plt.pause(0.5)
-            plt.clf()
-
-            # Save results
-            LocalizationsFinal_Split.append(np.column_stack((X1[IND], X2[IND], X3[IND])))
-            Photons_Split.append(Photons[ksu][IND])
-            if TrueLocalizations[ksu] is not None:
-                TrueLocalizations_Split.append(np.column_stack((X1t[INDt], X2t[INDt], X3t[INDt])))
-
-            cut1array.append(cut1)
-            cut2array.append(cut2)
-            cut3array.append(cut3)
-            Frame_Information_Split.append(X4[IND])
-            Came_from_image.append(ksu)
-            Parameters_to_split.append([ppf, ppf2, ppf3])
-            addonarray.append(addon)
-            temp_numb_of_loc.append(len(IND))
-
-            counter += 1
-
-            if len(X1) < min_loc:
-                flag = 1
-                break
 
 
 # Overwrite original variables with split versions

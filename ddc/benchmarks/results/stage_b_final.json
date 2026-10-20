@@ -1,0 +1,363 @@
+{
+  "environment": {
+    "python": "3.12.13",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "platform": "Linux-6.18.35-x86_64-with-glibc2.39",
+    "architecture": "x86_64",
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8370C CPU @ 2.80GHz",
+    "logical_cores": 9,
+    "total_ram_bytes": 17106231296,
+    "environment_variables": {
+      "OMP_NUM_THREADS": null,
+      "OPENBLAS_NUM_THREADS": null,
+      "MKL_NUM_THREADS": null
+    }
+  },
+  "frozen_stage_a_sha256": "a54496a4c08591fee307314ef95a2046b8c4c4e59c710ec913549691a1441279",
+  "methodology": {
+    "same_machine": true,
+    "fixed_target_step_total": 15,
+    "wall_clock_not_terminating": true,
+    "same_seed_per_version": true
+  },
+  "component_measurements": [
+    {
+      "version": "Stage A",
+      "component": "make_distance_matrix_individual",
+      "n_localizations": 200,
+      "minimum_seconds": 0.23882418700122798,
+      "median_seconds": 0.23889043300005142,
+      "mean_seconds": 0.24109593566754484,
+      "repetitions": 3,
+      "peak_tracemalloc_bytes": 173813
+    },
+    {
+      "version": "Stage A",
+      "component": "determine_blinking_distribution",
+      "n_localizations": 200,
+      "minimum_seconds": 0.0024882549987523817,
+      "median_seconds": 0.002637898000102723,
+      "mean_seconds": 0.0027560003333443697,
+      "repetitions": 3,
+      "peak_tracemalloc_bytes": null
+    },
+    {
+      "version": "Stage A",
+      "component": "calculate_score_8",
+      "n_localizations": 200,
+      "minimum_seconds": 0.009750387998792576,
+      "median_seconds": 0.009806578000279842,
+      "mean_seconds": 0.00984379766669008,
+      "repetitions": 3,
+      "peak_tracemalloc_bytes": null
+    },
+    {
+      "version": "Stage A",
+      "component": "density_calc",
+      "n_localizations": 400,
+      "minimum_seconds": 1.7011135430002469,
+      "median_seconds": 1.7542512710006122,
+      "mean_seconds": 1.7465540893335856,
+      "repetitions": 3,
+      "peak_tracemalloc_bytes": 11432
+    },
+    {
+      "version": "Stage A",
+      "component": "_eliminate_blinking_de_loc15",
+      "n_localizations": 200,
+      "minimum_seconds": 0.03070035600103438,
+      "median_seconds": 0.03407882800092921,
+      "mean_seconds": 0.03367914066742136,
+      "repetitions": 3,
+      "peak_tracemalloc_bytes": null
+    },
+    {
+      "version": "Stage A",
+      "component": "run_mcmc",
+      "n_localizations": 100,
+      "minimum_seconds": 0.463612995999938,
+      "median_seconds": 0.4824904310007696,
+      "mean_seconds": 0.5277959263336621,
+      "repetitions": 3,
+      "peak_tracemalloc_bytes": null
+    },
+    {
+      "version": "Stage B",
+      "component": "make_distance_matrix_individual",
+      "n_localizations": 200,
+      "minimum_seconds": 0.11097162900114199,
+      "median_seconds": 0.12168069200015452,
+      "mean_seconds": 0.1429757490004704,
+      "repetitions": 3,
+      "peak_tracemalloc_bytes": 177641
+    },
+    {
+      "version": "Stage B",
+      "component": "determine_blinking_distribution",
+      "n_localizations": 200,
+      "minimum_seconds": 0.002649411999300355,
+      "median_seconds": 0.0027863840005011298,
+      "mean_seconds": 0.002831174999907186,
+      "repetitions": 3,
+      "peak_tracemalloc_bytes": null
+    },
+    {
+      "version": "Stage B",
+      "component": "calculate_score_8",
+      "n_localizations": 200,
+      "minimum_seconds": 0.00039984699833439663,
+      "median_seconds": 0.00042985000072803814,
+      "mean_seconds": 0.0004996003335691057,
+      "repetitions": 3,
+      "peak_tracemalloc_bytes": null
+    },
+    {
+      "version": "Stage B",
+      "component": "density_calc",
+      "n_localizations": 400,
+      "minimum_seconds": 0.006765022999388748,
+      "median_seconds": 0.0076262900001893286,
+      "mean_seconds": 0.0074123933330459595,
+      "repetitions": 3,
+      "peak_tracemalloc_bytes": 764880
+    },
+    {
+      "version": "Stage B",
+      "component": "_eliminate_blinking_de_loc15",
+      "n_localizations": 200,
+      "minimum_seconds": 0.01919930600161024,
+      "median_seconds": 0.019626262001111172,
+      "mean_seconds": 0.019538921000882208,
+      "repetitions": 3,
+      "peak_tracemalloc_bytes": null
+    },
+    {
+      "version": "Stage B",
+      "component": "run_mcmc",
+      "n_localizations": 100,
+      "minimum_seconds": 0.28662176500074565,
+      "median_seconds": 0.3302502260012261,
+      "mean_seconds": 0.3164798963340824,
+      "repetitions": 3,
+      "peak_tracemalloc_bytes": null
+    },
+    {
+      "version": "Stage A",
+      "component": "checkpoint_save_v73",
+      "n_localizations": 23,
+      "minimum_seconds": 0.0224843720006902,
+      "median_seconds": 0.022594110001591616,
+      "mean_seconds": 0.0247677660008776,
+      "repetitions": 3,
+      "peak_tracemalloc_bytes": 46440
+    },
+    {
+      "version": "Stage A",
+      "component": "checkpoint_load_v73",
+      "n_localizations": 23,
+      "minimum_seconds": 0.027303811999445315,
+      "median_seconds": 0.029651236998688546,
+      "mean_seconds": 0.028949869665666483,
+      "repetitions": 3,
+      "peak_tracemalloc_bytes": 52910
+    },
+    {
+      "version": "Stage B",
+      "component": "checkpoint_save_v73",
+      "n_localizations": 23,
+      "minimum_seconds": 0.024634549001348205,
+      "median_seconds": 0.026454893000845914,
+      "mean_seconds": 0.027503700667390756,
+      "repetitions": 3,
+      "peak_tracemalloc_bytes": 44192
+    },
+    {
+      "version": "Stage B",
+      "component": "checkpoint_load_v73",
+      "n_localizations": 23,
+      "minimum_seconds": 0.022640663999482058,
+      "median_seconds": 0.02285872799984645,
+      "mean_seconds": 0.023048752333124867,
+      "repetitions": 3,
+      "peak_tracemalloc_bytes": 52824
+    },
+    {
+      "version": "Stage A",
+      "component": "run_ddc",
+      "n_localizations": 100,
+      "minimum_seconds": 0.31562545700035116,
+      "median_seconds": 0.31690876300126547,
+      "mean_seconds": 0.3223317590006142,
+      "repetitions": 3,
+      "peak_tracemalloc_bytes": null
+    },
+    {
+      "version": "Stage B",
+      "component": "run_ddc",
+      "n_localizations": 100,
+      "minimum_seconds": 0.14646745699974417,
+      "median_seconds": 0.15885390500079666,
+      "mean_seconds": 0.1685297139999117,
+      "repetitions": 3,
+      "peak_tracemalloc_bytes": null
+    }
+  ],
+  "component_comparisons": [
+    {
+      "component": "_eliminate_blinking_de_loc15",
+      "stage_a_seconds": 0.03407882800092921,
+      "stage_b_seconds": 0.019626262001111172,
+      "speedup": 1.7363891299830696,
+      "absolute_saved_seconds": 0.014452565999818034,
+      "contribution_of_positive_component_savings": 0.006555190198519353
+    },
+    {
+      "component": "calculate_score_8",
+      "stage_a_seconds": 0.009806578000279842,
+      "stage_b_seconds": 0.00042985000072803814,
+      "speedup": 22.813953666791704,
+      "absolute_saved_seconds": 0.009376727999551804,
+      "contribution_of_positive_component_savings": 0.004252963486042399
+    },
+    {
+      "component": "checkpoint_load_v73",
+      "stage_a_seconds": 0.029651236998688546,
+      "stage_b_seconds": 0.02285872799984645,
+      "speedup": 1.2971516612336313,
+      "absolute_saved_seconds": 0.006792508998842095,
+      "contribution_of_positive_component_savings": 0.00308085003127644
+    },
+    {
+      "component": "checkpoint_save_v73",
+      "stage_a_seconds": 0.022594110001591616,
+      "stage_b_seconds": 0.026454893000845914,
+      "speedup": 0.8540616664323365,
+      "absolute_saved_seconds": -0.0038607829992542975,
+      "contribution_of_positive_component_savings": 0.0
+    },
+    {
+      "component": "density_calc",
+      "stage_a_seconds": 1.7542512710006122,
+      "stage_b_seconds": 0.0076262900001893286,
+      "speedup": 230.02682443980777,
+      "absolute_saved_seconds": 1.7466249810004228,
+      "contribution_of_positive_component_savings": 0.7922094219176843
+    },
+    {
+      "component": "determine_blinking_distribution",
+      "stage_a_seconds": 0.002637898000102723,
+      "stage_b_seconds": 0.0027863840005011298,
+      "speedup": 0.9467101446276961,
+      "absolute_saved_seconds": -0.00014848600039840676,
+      "contribution_of_positive_component_savings": 0.0
+    },
+    {
+      "component": "make_distance_matrix_individual",
+      "stage_a_seconds": 0.23889043300005142,
+      "stage_b_seconds": 0.12168069200015452,
+      "speedup": 1.9632566931797861,
+      "absolute_saved_seconds": 0.1172097409998969,
+      "contribution_of_positive_component_savings": 0.053162334313726
+    },
+    {
+      "component": "run_ddc",
+      "stage_a_seconds": 0.31690876300126547,
+      "stage_b_seconds": 0.15885390500079666,
+      "speedup": 1.9949699253517008,
+      "absolute_saved_seconds": 0.1580548580004688,
+      "contribution_of_positive_component_savings": 0.0716882840047979
+    },
+    {
+      "component": "run_mcmc",
+      "stage_a_seconds": 0.4824904310007696,
+      "stage_b_seconds": 0.3302502260012261,
+      "speedup": 1.4609844082255927,
+      "absolute_saved_seconds": 0.1522402049995435,
+      "contribution_of_positive_component_savings": 0.06905095604795367
+    }
+  ],
+  "end_to_end": [
+    {
+      "n_localizations": 23,
+      "Stage A": {
+        "minimum_seconds": 0.02385758899981738,
+        "median_seconds": 0.025939255001503625,
+        "mean_seconds": 0.03278946500055705,
+        "repetitions": 3,
+        "outer_mcmc_iterations": 1,
+        "proposal_attempts": 2
+      },
+      "Stage B": {
+        "minimum_seconds": 0.01608800599933602,
+        "median_seconds": 0.02291320099902805,
+        "mean_seconds": 0.021771088332873962,
+        "repetitions": 3,
+        "outer_mcmc_iterations": 1,
+        "proposal_attempts": 2
+      },
+      "speedup": 1.1320659650567346
+    },
+    {
+      "n_localizations": 50,
+      "Stage A": {
+        "minimum_seconds": 0.06349940600011905,
+        "median_seconds": 0.06414209099966683,
+        "mean_seconds": 0.0662795683335086,
+        "repetitions": 3,
+        "outer_mcmc_iterations": 1,
+        "proposal_attempts": 1
+      },
+      "Stage B": {
+        "minimum_seconds": 0.0300726069999655,
+        "median_seconds": 0.03224000699992757,
+        "mean_seconds": 0.03225731199988028,
+        "repetitions": 3,
+        "outer_mcmc_iterations": 1,
+        "proposal_attempts": 1
+      },
+      "speedup": 1.9895185196396183
+    },
+    {
+      "n_localizations": 100,
+      "Stage A": {
+        "minimum_seconds": 0.31562545700035116,
+        "median_seconds": 0.31690876300126547,
+        "mean_seconds": 0.3223317590006142,
+        "repetitions": 3,
+        "outer_mcmc_iterations": 1,
+        "proposal_attempts": 8
+      },
+      "Stage B": {
+        "minimum_seconds": 0.14646745699974417,
+        "median_seconds": 0.15885390500079666,
+        "mean_seconds": 0.1685297139999117,
+        "repetitions": 3,
+        "outer_mcmc_iterations": 1,
+        "proposal_attempts": 8
+      },
+      "speedup": 1.9949699253517008
+    },
+    {
+      "n_localizations": 200,
+      "Stage A": {
+        "minimum_seconds": 0.9699507730001642,
+        "median_seconds": 0.9699507730001642,
+        "mean_seconds": 0.9699507730001642,
+        "repetitions": 1,
+        "outer_mcmc_iterations": 1,
+        "proposal_attempts": 5
+      },
+      "Stage B": {
+        "minimum_seconds": 0.5456741760008299,
+        "median_seconds": 0.5456741760008299,
+        "mean_seconds": 0.5456741760008299,
+        "repetitions": 1,
+        "outer_mcmc_iterations": 1,
+        "proposal_attempts": 5
+      },
+      "speedup": 1.7775273517775725
+    }
+  ],
+  "total_seconds": 30.75917404900065
+}

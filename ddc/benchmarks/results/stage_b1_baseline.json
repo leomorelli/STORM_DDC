@@ -1,0 +1,3587 @@
+{
+  "environment": {
+    "python": "3.12.13",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "platform": "Linux-6.18.35-x86_64-with-glibc2.39",
+    "architecture": "x86_64",
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8370C CPU @ 2.80GHz",
+    "logical_cores": 9,
+    "total_ram_bytes": 17106231296,
+    "environment_variables": {
+      "OMP_NUM_THREADS": null,
+      "OPENBLAS_NUM_THREADS": null,
+      "MKL_NUM_THREADS": null
+    }
+  },
+  "frozen_stage_a_sha256": "a54496a4c08591fee307314ef95a2046b8c4c4e59c710ec913549691a1441279",
+  "fixture_tiers": {
+    "tiny": 25,
+    "small": 100,
+    "medium": 500,
+    "large": 1000
+  },
+  "methodology": {
+    "warmup": 1,
+    "timing": "time.perf_counter; 5 repetitions cheap, 3 expensive",
+    "memory": "tracemalloc peak; excludes some NumPy/SciPy native allocations"
+  },
+  "benchmarks": {
+    "components": [
+      {
+        "name": "make_distance_matrix_individual",
+        "n_localizations": 25,
+        "dimensions": 2,
+        "repetitions": 5,
+        "min_seconds": 0.004597054000441858,
+        "median_seconds": 0.005761726999480743,
+        "mean_seconds": 0.007009451799785893,
+        "std_seconds": 0.0026991780305240906,
+        "peak_tracemalloc_bytes": 6776
+      },
+      {
+        "name": "determine_blinking_distribution",
+        "n_localizations": 25,
+        "dimensions": 2,
+        "repetitions": 5,
+        "min_seconds": 0.0018620580003698706,
+        "median_seconds": 0.0019782700001087505,
+        "mean_seconds": 0.0021902043999944,
+        "std_seconds": 0.0004026840747241107,
+        "peak_tracemalloc_bytes": 33019
+      },
+      {
+        "name": "make_distance_matrix_individual",
+        "n_localizations": 100,
+        "dimensions": 2,
+        "repetitions": 5,
+        "min_seconds": 0.06886586600012379,
+        "median_seconds": 0.07411912299994583,
+        "mean_seconds": 0.07625293979981507,
+        "std_seconds": 0.0059945333901381195,
+        "peak_tracemalloc_bytes": null
+      },
+      {
+        "name": "determine_blinking_distribution",
+        "n_localizations": 100,
+        "dimensions": 2,
+        "repetitions": 5,
+        "min_seconds": 0.0018941250000352738,
+        "median_seconds": 0.0019443379997028387,
+        "mean_seconds": 0.0019373154000277282,
+        "std_seconds": 3.766389218262817e-05,
+        "peak_tracemalloc_bytes": null
+      },
+      {
+        "name": "make_distance_matrix_individual",
+        "n_localizations": 250,
+        "dimensions": 2,
+        "repetitions": 3,
+        "min_seconds": 0.5797378400002344,
+        "median_seconds": 0.588879949999864,
+        "mean_seconds": 0.6204941220000061,
+        "std_seconds": 0.051309560531649846,
+        "peak_tracemalloc_bytes": null
+      },
+      {
+        "name": "determine_blinking_distribution",
+        "n_localizations": 250,
+        "dimensions": 2,
+        "repetitions": 3,
+        "min_seconds": 0.0026686540004448034,
+        "median_seconds": 0.003654733000075794,
+        "mean_seconds": 0.0033706143337136987,
+        "std_seconds": 0.0004993540442951633,
+        "peak_tracemalloc_bytes": null
+      },
+      {
+        "name": "density_calc",
+        "n_localizations": 50,
+        "dimensions": 2,
+        "repetitions": 5,
+        "min_seconds": 0.025061769000785716,
+        "median_seconds": 0.025771829000404978,
+        "mean_seconds": 0.025900946400361134,
+        "std_seconds": 0.0007697596230964453,
+        "peak_tracemalloc_bytes": 2328
+      },
+      {
+        "name": "density_calc",
+        "n_localizations": 100,
+        "dimensions": 2,
+        "repetitions": 5,
+        "min_seconds": 0.1010326220002753,
+        "median_seconds": 0.1166520489996401,
+        "mean_seconds": 0.12249431519976497,
+        "std_seconds": 0.020010932578702956,
+        "peak_tracemalloc_bytes": null
+      },
+      {
+        "name": "density_calc",
+        "n_localizations": 200,
+        "dimensions": 2,
+        "repetitions": 5,
+        "min_seconds": 0.42467315700014296,
+        "median_seconds": 0.45704150199981086,
+        "mean_seconds": 0.45130773020009657,
+        "std_seconds": 0.015926534966614805,
+        "peak_tracemalloc_bytes": null
+      },
+      {
+        "name": "density_calc",
+        "n_localizations": 400,
+        "dimensions": 2,
+        "repetitions": 3,
+        "min_seconds": 1.8632655979999981,
+        "median_seconds": 1.8914040500003466,
+        "mean_seconds": 1.8834206966666898,
+        "std_seconds": 0.014354015897607871,
+        "peak_tracemalloc_bytes": null
+      },
+      {
+        "name": "determine_locs_w_multi2",
+        "n_localizations": 25,
+        "dimensions": 2,
+        "repetitions": 5,
+        "min_seconds": 0.0019194979995518224,
+        "median_seconds": 0.001924678999785101,
+        "mean_seconds": 0.0019302819997392361,
+        "std_seconds": 1.2165215511474956e-05,
+        "peak_tracemalloc_bytes": 2176
+      },
+      {
+        "name": "determine_locs_w_multi2",
+        "n_localizations": 50,
+        "dimensions": 2,
+        "repetitions": 5,
+        "min_seconds": 0.002597278000393999,
+        "median_seconds": 0.0026507450002100086,
+        "mean_seconds": 0.002648911600226711,
+        "std_seconds": 4.3055329909939015e-05,
+        "peak_tracemalloc_bytes": 2192
+      },
+      {
+        "name": "determine_locs_w_multi2",
+        "n_localizations": 100,
+        "dimensions": 2,
+        "repetitions": 5,
+        "min_seconds": 0.011951952999879722,
+        "median_seconds": 0.014181579999785754,
+        "mean_seconds": 0.015858628999922075,
+        "std_seconds": 0.004524626445712247,
+        "peak_tracemalloc_bytes": null
+      },
+      {
+        "name": "eliminate_blinking_de_loc15_mcmc",
+        "n_localizations": 25,
+        "dimensions": 2,
+        "repetitions": 5,
+        "min_seconds": 0.005294264000440307,
+        "median_seconds": 0.005698898000446206,
+        "mean_seconds": 0.005612128800385108,
+        "std_seconds": 0.00017590101604106036,
+        "peak_tracemalloc_bytes": 6304
+      },
+      {
+        "name": "determine_deviation_in_probability8",
+        "n_localizations": 25,
+        "dimensions": 2,
+        "repetitions": 3,
+        "min_seconds": 0.007286056999873836,
+        "median_seconds": 0.007828983999388583,
+        "mean_seconds": 0.00776666666630869,
+        "std_seconds": 0.0003696113172944199,
+        "peak_tracemalloc_bytes": 28075
+      },
+      {
+        "name": "eliminate_blinking_de_loc15_mcmc",
+        "n_localizations": 50,
+        "dimensions": 2,
+        "repetitions": 5,
+        "min_seconds": 0.01906234299985954,
+        "median_seconds": 0.019934246999582683,
+        "mean_seconds": 0.022585174000050758,
+        "std_seconds": 0.005346930612970377,
+        "peak_tracemalloc_bytes": 7400
+      },
+      {
+        "name": "determine_deviation_in_probability8",
+        "n_localizations": 50,
+        "dimensions": 2,
+        "repetitions": 3,
+        "min_seconds": 0.02068126299946016,
+        "median_seconds": 0.020876821000456403,
+        "mean_seconds": 0.02344084233330553,
+        "std_seconds": 0.003765200638900136,
+        "peak_tracemalloc_bytes": 44333
+      },
+      {
+        "name": "eliminate_blinking_de_loc15_mcmc",
+        "n_localizations": 100,
+        "dimensions": 2,
+        "repetitions": 5,
+        "min_seconds": 0.03663609199975326,
+        "median_seconds": 0.0430240750001758,
+        "mean_seconds": 0.04304483880005137,
+        "std_seconds": 0.005153983581801906,
+        "peak_tracemalloc_bytes": null
+      },
+      {
+        "name": "determine_deviation_in_probability8",
+        "n_localizations": 100,
+        "dimensions": 2,
+        "repetitions": 3,
+        "min_seconds": 0.037843140000404674,
+        "median_seconds": 0.03792229000009684,
+        "mean_seconds": 0.038392239333613055,
+        "std_seconds": 0.0007213003625294686,
+        "peak_tracemalloc_bytes": null
+      },
+      {
+        "name": "density_calc_3d",
+        "n_localizations": 100,
+        "dimensions": 3,
+        "repetitions": 3,
+        "min_seconds": 0.10126476200002799,
+        "median_seconds": 0.10153657999944699,
+        "mean_seconds": 0.10152573366637323,
+        "std_seconds": 0.00020879538302711806,
+        "peak_tracemalloc_bytes": null
+      },
+      {
+        "name": "density_calc_repository_surrogate",
+        "n_localizations": 100,
+        "dimensions": 3,
+        "repetitions": 3,
+        "min_seconds": 0.10193234200050938,
+        "median_seconds": 0.11013242899934994,
+        "mean_seconds": 0.10939621766647178,
+        "std_seconds": 0.005817012820519305,
+        "peak_tracemalloc_bytes": null,
+        "fixture": "PERFORMANCE-ONLY SUPPORTED SURROGATE"
+      },
+      {
+        "name": "calculate_score_8",
+        "n_localizations": 12,
+        "dimensions": 2,
+        "repetitions": 3,
+        "min_seconds": 0.01120235300004424,
+        "median_seconds": 0.011470491999716614,
+        "mean_seconds": 0.011455958333196273,
+        "std_seconds": 0.00020139691676863148,
+        "peak_tracemalloc_bytes": 18419,
+        "source_n": 50,
+        "retained_fraction": 0.25,
+        "pdist_call_count": 10,
+        "pdist_calls_per_score": 2.0,
+        "pdist_cumulative_seconds": 0.0006025969987604185,
+        "pdist_input_shapes": [
+          [
+            12,
+            2
+          ],
+          [
+            12,
+            2
+          ],
+          [
+            12,
+            2
+          ],
+          [
+            12,
+            2
+          ],
+          [
+            12,
+            2
+          ],
+          [
+            12,
+            2
+          ],
+          [
+            12,
+            2
+          ],
+          [
+            12,
+            2
+          ],
+          [
+            12,
+            2
+          ],
+          [
+            12,
+            2
+          ]
+        ]
+      },
+      {
+        "name": "calculate_score_8",
+        "n_localizations": 25,
+        "dimensions": 2,
+        "repetitions": 3,
+        "min_seconds": 0.023181520999969507,
+        "median_seconds": 0.0258223420005379,
+        "mean_seconds": 0.02527382266695592,
+        "std_seconds": 0.0015342602580091548,
+        "peak_tracemalloc_bytes": 18981,
+        "source_n": 50,
+        "retained_fraction": 0.5,
+        "pdist_call_count": 10,
+        "pdist_calls_per_score": 2.0,
+        "pdist_cumulative_seconds": 0.0007390730006591184,
+        "pdist_input_shapes": [
+          [
+            25,
+            2
+          ],
+          [
+            25,
+            2
+          ],
+          [
+            25,
+            2
+          ],
+          [
+            25,
+            2
+          ],
+          [
+            25,
+            2
+          ],
+          [
+            25,
+            2
+          ],
+          [
+            25,
+            2
+          ],
+          [
+            25,
+            2
+          ],
+          [
+            25,
+            2
+          ],
+          [
+            25,
+            2
+          ]
+        ]
+      },
+      {
+        "name": "calculate_score_8",
+        "n_localizations": 37,
+        "dimensions": 2,
+        "repetitions": 3,
+        "min_seconds": 0.030459329999757756,
+        "median_seconds": 0.030719860000317567,
+        "mean_seconds": 0.031196950666829554,
+        "std_seconds": 0.000865490877383312,
+        "peak_tracemalloc_bytes": 20029,
+        "source_n": 50,
+        "retained_fraction": 0.75,
+        "pdist_call_count": 10,
+        "pdist_calls_per_score": 2.0,
+        "pdist_cumulative_seconds": 0.0008676249981363071,
+        "pdist_input_shapes": [
+          [
+            37,
+            2
+          ],
+          [
+            37,
+            2
+          ],
+          [
+            37,
+            2
+          ],
+          [
+            37,
+            2
+          ],
+          [
+            37,
+            2
+          ],
+          [
+            37,
+            2
+          ],
+          [
+            37,
+            2
+          ],
+          [
+            37,
+            2
+          ],
+          [
+            37,
+            2
+          ],
+          [
+            37,
+            2
+          ]
+        ]
+      },
+      {
+        "name": "calculate_score_8",
+        "n_localizations": 50,
+        "dimensions": 2,
+        "repetitions": 3,
+        "min_seconds": 0.03698875100053556,
+        "median_seconds": 0.04452444900016417,
+        "mean_seconds": 0.045486778333421775,
+        "std_seconds": 0.007362990663826334,
+        "peak_tracemalloc_bytes": 27650,
+        "source_n": 50,
+        "retained_fraction": 1.0,
+        "pdist_call_count": 10,
+        "pdist_calls_per_score": 2.0,
+        "pdist_cumulative_seconds": 0.0011816559999715537,
+        "pdist_input_shapes": [
+          [
+            50,
+            2
+          ],
+          [
+            50,
+            2
+          ],
+          [
+            50,
+            2
+          ],
+          [
+            50,
+            2
+          ],
+          [
+            50,
+            2
+          ],
+          [
+            50,
+            2
+          ],
+          [
+            50,
+            2
+          ],
+          [
+            50,
+            2
+          ],
+          [
+            50,
+            2
+          ],
+          [
+            50,
+            2
+          ]
+        ]
+      },
+      {
+        "name": "calculate_score_8",
+        "n_localizations": 25,
+        "dimensions": 2,
+        "repetitions": 3,
+        "min_seconds": 0.05930976499985263,
+        "median_seconds": 0.06582890699974087,
+        "mean_seconds": 0.06373287233327574,
+        "std_seconds": 0.0031290311068714613,
+        "peak_tracemalloc_bytes": 28645,
+        "source_n": 100,
+        "retained_fraction": 0.25,
+        "pdist_call_count": 10,
+        "pdist_calls_per_score": 2.0,
+        "pdist_cumulative_seconds": 0.0007720890016571502,
+        "pdist_input_shapes": [
+          [
+            25,
+            2
+          ],
+          [
+            25,
+            2
+          ],
+          [
+            25,
+            2
+          ],
+          [
+            25,
+            2
+          ],
+          [
+            25,
+            2
+          ],
+          [
+            25,
+            2
+          ],
+          [
+            25,
+            2
+          ],
+          [
+            25,
+            2
+          ],
+          [
+            25,
+            2
+          ],
+          [
+            25,
+            2
+          ]
+        ]
+      },
+      {
+        "name": "calculate_score_8",
+        "n_localizations": 50,
+        "dimensions": 2,
+        "repetitions": 3,
+        "min_seconds": 0.10687998399953358,
+        "median_seconds": 0.1285156050007572,
+        "mean_seconds": 0.1349903713335152,
+        "std_seconds": 0.026001598215509025,
+        "peak_tracemalloc_bytes": 30620,
+        "source_n": 100,
+        "retained_fraction": 0.5,
+        "pdist_call_count": 10,
+        "pdist_calls_per_score": 2.0,
+        "pdist_cumulative_seconds": 0.0012813920011467417,
+        "pdist_input_shapes": [
+          [
+            50,
+            2
+          ],
+          [
+            50,
+            2
+          ],
+          [
+            50,
+            2
+          ],
+          [
+            50,
+            2
+          ],
+          [
+            50,
+            2
+          ],
+          [
+            50,
+            2
+          ],
+          [
+            50,
+            2
+          ],
+          [
+            50,
+            2
+          ],
+          [
+            50,
+            2
+          ],
+          [
+            50,
+            2
+          ]
+        ]
+      },
+      {
+        "name": "calculate_score_8",
+        "n_localizations": 75,
+        "dimensions": 2,
+        "repetitions": 3,
+        "min_seconds": 0.1396289340000294,
+        "median_seconds": 0.15399362399966776,
+        "mean_seconds": 0.15741170066636792,
+        "std_seconds": 0.01609747181434538,
+        "peak_tracemalloc_bytes": null,
+        "source_n": 100,
+        "retained_fraction": 0.75,
+        "pdist_call_count": 8,
+        "pdist_calls_per_score": 2.0,
+        "pdist_cumulative_seconds": 0.0006870180013720528,
+        "pdist_input_shapes": [
+          [
+            75,
+            2
+          ],
+          [
+            75,
+            2
+          ],
+          [
+            75,
+            2
+          ],
+          [
+            75,
+            2
+          ],
+          [
+            75,
+            2
+          ],
+          [
+            75,
+            2
+          ],
+          [
+            75,
+            2
+          ],
+          [
+            75,
+            2
+          ]
+        ]
+      },
+      {
+        "name": "calculate_score_8",
+        "n_localizations": 100,
+        "dimensions": 2,
+        "repetitions": 3,
+        "min_seconds": 0.15194354499999463,
+        "median_seconds": 0.15448277599989524,
+        "mean_seconds": 0.16611597299985684,
+        "std_seconds": 0.018276754539420893,
+        "peak_tracemalloc_bytes": null,
+        "source_n": 100,
+        "retained_fraction": 1.0,
+        "pdist_call_count": 8,
+        "pdist_calls_per_score": 2.0,
+        "pdist_cumulative_seconds": 0.0006474079991676263,
+        "pdist_input_shapes": [
+          [
+            100,
+            2
+          ],
+          [
+            100,
+            2
+          ],
+          [
+            100,
+            2
+          ],
+          [
+            100,
+            2
+          ],
+          [
+            100,
+            2
+          ],
+          [
+            100,
+            2
+          ],
+          [
+            100,
+            2
+          ],
+          [
+            100,
+            2
+          ]
+        ]
+      },
+      {
+        "name": "calculate_score_8",
+        "n_localizations": 50,
+        "dimensions": 2,
+        "repetitions": 3,
+        "min_seconds": 0.2500128120000227,
+        "median_seconds": 0.27283903199986526,
+        "mean_seconds": 0.2680426993335156,
+        "std_seconds": 0.013206167920495952,
+        "peak_tracemalloc_bytes": 50220,
+        "source_n": 200,
+        "retained_fraction": 0.25,
+        "pdist_call_count": 10,
+        "pdist_calls_per_score": 2.0,
+        "pdist_cumulative_seconds": 0.001222688000780181,
+        "pdist_input_shapes": [
+          [
+            50,
+            2
+          ],
+          [
+            50,
+            2
+          ],
+          [
+            50,
+            2
+          ],
+          [
+            50,
+            2
+          ],
+          [
+            50,
+            2
+          ],
+          [
+            50,
+            2
+          ],
+          [
+            50,
+            2
+          ],
+          [
+            50,
+            2
+          ],
+          [
+            50,
+            2
+          ],
+          [
+            50,
+            2
+          ]
+        ]
+      },
+      {
+        "name": "calculate_score_8",
+        "n_localizations": 100,
+        "dimensions": 2,
+        "repetitions": 3,
+        "min_seconds": 0.48164107899992814,
+        "median_seconds": 0.49998282399974414,
+        "mean_seconds": 0.5047389479996127,
+        "std_seconds": 0.021071127116252957,
+        "peak_tracemalloc_bytes": null,
+        "source_n": 200,
+        "retained_fraction": 0.5,
+        "pdist_call_count": 8,
+        "pdist_calls_per_score": 2.0,
+        "pdist_cumulative_seconds": 0.0007029640000837389,
+        "pdist_input_shapes": [
+          [
+            100,
+            2
+          ],
+          [
+            100,
+            2
+          ],
+          [
+            100,
+            2
+          ],
+          [
+            100,
+            2
+          ],
+          [
+            100,
+            2
+          ],
+          [
+            100,
+            2
+          ],
+          [
+            100,
+            2
+          ],
+          [
+            100,
+            2
+          ]
+        ]
+      },
+      {
+        "name": "calculate_score_8",
+        "n_localizations": 150,
+        "dimensions": 2,
+        "repetitions": 3,
+        "min_seconds": 0.6355681479999475,
+        "median_seconds": 0.6568960129998231,
+        "mean_seconds": 0.6612810886666315,
+        "std_seconds": 0.022994744280256784,
+        "peak_tracemalloc_bytes": null,
+        "source_n": 200,
+        "retained_fraction": 0.75,
+        "pdist_call_count": 8,
+        "pdist_calls_per_score": 2.0,
+        "pdist_cumulative_seconds": 0.00315830399904371,
+        "pdist_input_shapes": [
+          [
+            150,
+            2
+          ],
+          [
+            150,
+            2
+          ],
+          [
+            150,
+            2
+          ],
+          [
+            150,
+            2
+          ],
+          [
+            150,
+            2
+          ],
+          [
+            150,
+            2
+          ],
+          [
+            150,
+            2
+          ],
+          [
+            150,
+            2
+          ]
+        ]
+      },
+      {
+        "name": "calculate_score_8",
+        "n_localizations": 200,
+        "dimensions": 2,
+        "repetitions": 3,
+        "min_seconds": 0.6635922630002824,
+        "median_seconds": 0.6854089810003643,
+        "mean_seconds": 0.6911417953333512,
+        "std_seconds": 0.025163177406326686,
+        "peak_tracemalloc_bytes": null,
+        "source_n": 200,
+        "retained_fraction": 1.0,
+        "pdist_call_count": 8,
+        "pdist_calls_per_score": 2.0,
+        "pdist_cumulative_seconds": 0.0010488180005268077,
+        "pdist_input_shapes": [
+          [
+            200,
+            2
+          ],
+          [
+            200,
+            2
+          ],
+          [
+            200,
+            2
+          ],
+          [
+            200,
+            2
+          ],
+          [
+            200,
+            2
+          ],
+          [
+            200,
+            2
+          ],
+          [
+            200,
+            2
+          ],
+          [
+            200,
+            2
+          ]
+        ]
+      },
+      {
+        "name": "calculate_score_8",
+        "n_localizations": 100,
+        "dimensions": 2,
+        "repetitions": 3,
+        "min_seconds": 1.1189162500004386,
+        "median_seconds": 1.2111257269998532,
+        "mean_seconds": 1.1907447873333392,
+        "std_seconds": 0.052350029553370675,
+        "peak_tracemalloc_bytes": null,
+        "source_n": 400,
+        "retained_fraction": 0.25,
+        "pdist_call_count": 8,
+        "pdist_calls_per_score": 2.0,
+        "pdist_cumulative_seconds": 0.0006689239999104757,
+        "pdist_input_shapes": [
+          [
+            100,
+            2
+          ],
+          [
+            100,
+            2
+          ],
+          [
+            100,
+            2
+          ],
+          [
+            100,
+            2
+          ],
+          [
+            100,
+            2
+          ],
+          [
+            100,
+            2
+          ],
+          [
+            100,
+            2
+          ],
+          [
+            100,
+            2
+          ]
+        ]
+      },
+      {
+        "name": "calculate_score_8",
+        "n_localizations": 200,
+        "dimensions": 2,
+        "repetitions": 3,
+        "min_seconds": 1.828788056999656,
+        "median_seconds": 1.8933617560005587,
+        "mean_seconds": 1.8801037226667177,
+        "std_seconds": 0.03767163552570863,
+        "peak_tracemalloc_bytes": null,
+        "source_n": 400,
+        "retained_fraction": 0.5,
+        "pdist_call_count": 8,
+        "pdist_calls_per_score": 2.0,
+        "pdist_cumulative_seconds": 0.0011491820005176123,
+        "pdist_input_shapes": [
+          [
+            200,
+            2
+          ],
+          [
+            200,
+            2
+          ],
+          [
+            200,
+            2
+          ],
+          [
+            200,
+            2
+          ],
+          [
+            200,
+            2
+          ],
+          [
+            200,
+            2
+          ],
+          [
+            200,
+            2
+          ],
+          [
+            200,
+            2
+          ]
+        ]
+      },
+      {
+        "name": "calculate_score_8",
+        "n_localizations": 300,
+        "dimensions": 2,
+        "repetitions": 3,
+        "min_seconds": 2.350856348999514,
+        "median_seconds": 2.4037597699998514,
+        "mean_seconds": 2.3875048146664994,
+        "std_seconds": 0.02596939783900461,
+        "peak_tracemalloc_bytes": null,
+        "source_n": 400,
+        "retained_fraction": 0.75,
+        "pdist_call_count": 8,
+        "pdist_calls_per_score": 2.0,
+        "pdist_cumulative_seconds": 0.0033543390009072027,
+        "pdist_input_shapes": [
+          [
+            300,
+            2
+          ],
+          [
+            300,
+            2
+          ],
+          [
+            300,
+            2
+          ],
+          [
+            300,
+            2
+          ],
+          [
+            300,
+            2
+          ],
+          [
+            300,
+            2
+          ],
+          [
+            300,
+            2
+          ],
+          [
+            300,
+            2
+          ]
+        ]
+      },
+      {
+        "name": "calculate_score_8",
+        "n_localizations": 400,
+        "dimensions": 2,
+        "repetitions": 3,
+        "min_seconds": 2.7872670399992785,
+        "median_seconds": 2.8321247720004976,
+        "mean_seconds": 2.8504101633331325,
+        "std_seconds": 0.06042078163825354,
+        "peak_tracemalloc_bytes": null,
+        "source_n": 400,
+        "retained_fraction": 1.0,
+        "pdist_call_count": 8,
+        "pdist_calls_per_score": 2.0,
+        "pdist_cumulative_seconds": 0.0198215109994635,
+        "pdist_input_shapes": [
+          [
+            400,
+            2
+          ],
+          [
+            400,
+            2
+          ],
+          [
+            400,
+            2
+          ],
+          [
+            400,
+            2
+          ],
+          [
+            400,
+            2
+          ],
+          [
+            400,
+            2
+          ],
+          [
+            400,
+            2
+          ],
+          [
+            400,
+            2
+          ]
+        ]
+      },
+      {
+        "name": "matlab_intersect_first",
+        "n_localizations": 1000,
+        "dimensions": 2,
+        "repetitions": 5,
+        "min_seconds": 0.8319972159997633,
+        "median_seconds": 0.8433402709997608,
+        "mean_seconds": 0.8522233071998926,
+        "std_seconds": 0.020474354379730574,
+        "peak_tracemalloc_bytes": null,
+        "case": "unique",
+        "right_size": 500
+      },
+      {
+        "name": "matlab_intersect_first",
+        "n_localizations": 1000,
+        "dimensions": 2,
+        "repetitions": 5,
+        "min_seconds": 0.04960163499981718,
+        "median_seconds": 0.05116114900010871,
+        "mean_seconds": 0.054505194200100957,
+        "std_seconds": 0.006759249416062764,
+        "peak_tracemalloc_bytes": null,
+        "case": "duplicates",
+        "right_size": 500
+      },
+      {
+        "name": "matlab_intersect_first",
+        "n_localizations": 1000,
+        "dimensions": 2,
+        "repetitions": 5,
+        "min_seconds": 0.9853176840006199,
+        "median_seconds": 1.0278616180003155,
+        "mean_seconds": 1.0265709204002633,
+        "std_seconds": 0.025902213536081645,
+        "peak_tracemalloc_bytes": null,
+        "case": "no_match",
+        "right_size": 500
+      },
+      {
+        "name": "matlab_intersect_first",
+        "n_localizations": 1000,
+        "dimensions": 2,
+        "repetitions": 5,
+        "min_seconds": 1.0340783679994274,
+        "median_seconds": 1.1171794669999144,
+        "mean_seconds": 1.0948466511999868,
+        "std_seconds": 0.04680723295652926,
+        "peak_tracemalloc_bytes": null,
+        "case": "high_match",
+        "right_size": 900
+      }
+    ],
+    "run_mcmc": [
+      {
+        "name": "run_mcmc",
+        "requested_progress_after_reset": 1,
+        "n_localizations": 23,
+        "dimensions": 2,
+        "repetitions": 1,
+        "total_seconds": 0.03737650700077211,
+        "outer_iterations": 2,
+        "accepted_proposals": 2,
+        "rejected_proposals": 0,
+        "new_maxima": 1,
+        "proposal_attempts": 3,
+        "seconds_per_outer_iteration": 0.018688253500386054,
+        "seconds_per_accepted_state": 0.018688253500386054,
+        "counts": {
+          "pdist": 14,
+          "calculate_score_8": 2,
+          "density_calc": 1,
+          "proposal_generation": 3,
+          "eliminator": 3
+        },
+        "component_seconds": {
+          "pdist": 0.0006898960000398802,
+          "calculate_score_8": 0.001244402999873273,
+          "density_calc": 0.00555197700032295,
+          "proposal_generation": 0.00011678099963319255,
+          "eliminator": 0.006835416999820154
+        },
+        "pdist_input_shapes": [
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ]
+        ],
+        "pdist_fraction_total": 0.018458011606746146,
+        "unattributed_bookkeeping_seconds": 0.02293803300108266
+      },
+      {
+        "name": "run_mcmc",
+        "requested_progress_after_reset": 10,
+        "n_localizations": 23,
+        "dimensions": 2,
+        "repetitions": 1,
+        "total_seconds": 0.25594208300026366,
+        "outer_iterations": 11,
+        "accepted_proposals": 11,
+        "rejected_proposals": 0,
+        "new_maxima": 1,
+        "proposal_attempts": 52,
+        "seconds_per_outer_iteration": 0.02326746209093306,
+        "seconds_per_accepted_state": 0.02326746209093306,
+        "counts": {
+          "pdist": 32,
+          "calculate_score_8": 11,
+          "density_calc": 1,
+          "proposal_generation": 52,
+          "eliminator": 52
+        },
+        "component_seconds": {
+          "pdist": 0.0034176809967902955,
+          "calculate_score_8": 0.008840191997478541,
+          "density_calc": 0.01167871599955106,
+          "proposal_generation": 0.00928657899657992,
+          "eliminator": 0.19623159699494863
+        },
+        "pdist_input_shapes": [
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ]
+        ],
+        "pdist_fraction_total": 0.01335333742980741,
+        "unattributed_bookkeeping_seconds": 0.026487318014915218
+      },
+      {
+        "name": "run_mcmc",
+        "requested_progress_after_reset": 50,
+        "n_localizations": 23,
+        "dimensions": 2,
+        "repetitions": 1,
+        "total_seconds": 0.42933299300057115,
+        "outer_iterations": 51,
+        "accepted_proposals": 51,
+        "rejected_proposals": 0,
+        "new_maxima": 1,
+        "proposal_attempts": 143,
+        "seconds_per_outer_iteration": 0.008418293980403356,
+        "seconds_per_accepted_state": 0.008418293980403356,
+        "counts": {
+          "pdist": 112,
+          "calculate_score_8": 51,
+          "density_calc": 1,
+          "proposal_generation": 143,
+          "eliminator": 143
+        },
+        "component_seconds": {
+          "pdist": 0.006256073997064959,
+          "calculate_score_8": 0.023801026998626185,
+          "density_calc": 0.007561090999843145,
+          "proposal_generation": 0.016588049998972565,
+          "eliminator": 0.3640255570062436
+        },
+        "pdist_input_shapes": [
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ]
+        ],
+        "pdist_fraction_total": 0.01457161247576572,
+        "unattributed_bookkeeping_seconds": 0.01110119399982068
+      }
+    ],
+    "pipeline_and_serialization": [
+      {
+        "name": "run_ddc_no_checkpoint",
+        "n_localizations": 23,
+        "dimensions": 2,
+        "repetitions": 1,
+        "total_seconds": 0.018620503999954963,
+        "component_seconds": {
+          "blinking_distribution": 0.0018451310006639687,
+          "mcmc": 0.016526896999494056,
+          "photon_collapse": 0.0
+        }
+      },
+      {
+        "name": "save_initial_level5",
+        "n_localizations": 23,
+        "dimensions": 2,
+        "repetitions": 1,
+        "total_seconds": 0.002496496000276238,
+        "file_size_bytes": 6136
+      },
+      {
+        "name": "load_save_initial_level5",
+        "n_localizations": 23,
+        "dimensions": 2,
+        "repetitions": 1,
+        "total_seconds": 0.0011880379997819546,
+        "file_size_bytes": 6136
+      },
+      {
+        "name": "save_v73",
+        "n_localizations": 23,
+        "dimensions": 2,
+        "repetitions": 1,
+        "total_seconds": 0.03825421700003062,
+        "file_size_bytes": 32408
+      },
+      {
+        "name": "load_save_v73",
+        "n_localizations": 23,
+        "dimensions": 2,
+        "repetitions": 1,
+        "total_seconds": 0.04001801400045224,
+        "file_size_bytes": 32408
+      },
+      {
+        "name": "run_ddc_with_checkpoint",
+        "n_localizations": 23,
+        "dimensions": 2,
+        "repetitions": 1,
+        "total_seconds": 0.09828181000011682,
+        "file_size_bytes": 33824
+      }
+    ]
+  },
+  "scaling_exponents": {
+    "density_calc": 2.0562670087828323,
+    "make_distance_matrix_individual": 1.9959925871823008,
+    "determine_blinking_distribution": 0.24402113997773656,
+    "calculate_score_8": 2.0122948875913407
+  },
+  "hotspots": [
+    {
+      "component": "calculate_score_8",
+      "fixture_n": 400,
+      "seconds": 2.8321247720004976
+    },
+    {
+      "component": "calculate_score_8",
+      "fixture_n": 300,
+      "seconds": 2.4037597699998514
+    },
+    {
+      "component": "calculate_score_8",
+      "fixture_n": 200,
+      "seconds": 1.8933617560005587
+    },
+    {
+      "component": "density_calc",
+      "fixture_n": 400,
+      "seconds": 1.8914040500003466
+    },
+    {
+      "component": "calculate_score_8",
+      "fixture_n": 100,
+      "seconds": 1.2111257269998532
+    },
+    {
+      "component": "matlab_intersect_first",
+      "fixture_n": 1000,
+      "seconds": 1.1171794669999144
+    },
+    {
+      "component": "matlab_intersect_first",
+      "fixture_n": 1000,
+      "seconds": 1.0278616180003155
+    },
+    {
+      "component": "matlab_intersect_first",
+      "fixture_n": 1000,
+      "seconds": 0.8433402709997608
+    },
+    {
+      "component": "calculate_score_8",
+      "fixture_n": 200,
+      "seconds": 0.6854089810003643
+    },
+    {
+      "component": "calculate_score_8",
+      "fixture_n": 150,
+      "seconds": 0.6568960129998231
+    },
+    {
+      "component": "make_distance_matrix_individual",
+      "fixture_n": 250,
+      "seconds": 0.588879949999864
+    },
+    {
+      "component": "calculate_score_8",
+      "fixture_n": 100,
+      "seconds": 0.49998282399974414
+    },
+    {
+      "component": "density_calc",
+      "fixture_n": 200,
+      "seconds": 0.45704150199981086
+    },
+    {
+      "component": "run_mcmc",
+      "fixture_n": 23,
+      "seconds": 0.42933299300057115
+    },
+    {
+      "component": "calculate_score_8",
+      "fixture_n": 50,
+      "seconds": 0.27283903199986526
+    },
+    {
+      "component": "run_mcmc",
+      "fixture_n": 23,
+      "seconds": 0.25594208300026366
+    },
+    {
+      "component": "calculate_score_8",
+      "fixture_n": 100,
+      "seconds": 0.15448277599989524
+    },
+    {
+      "component": "calculate_score_8",
+      "fixture_n": 75,
+      "seconds": 0.15399362399966776
+    },
+    {
+      "component": "calculate_score_8",
+      "fixture_n": 50,
+      "seconds": 0.1285156050007572
+    },
+    {
+      "component": "density_calc",
+      "fixture_n": 100,
+      "seconds": 0.1166520489996401
+    }
+  ],
+  "pdist_analysis": {
+    "calculate_score_rows": [
+      {
+        "name": "calculate_score_8",
+        "n_localizations": 12,
+        "dimensions": 2,
+        "repetitions": 3,
+        "min_seconds": 0.01120235300004424,
+        "median_seconds": 0.011470491999716614,
+        "mean_seconds": 0.011455958333196273,
+        "std_seconds": 0.00020139691676863148,
+        "peak_tracemalloc_bytes": 18419,
+        "source_n": 50,
+        "retained_fraction": 0.25,
+        "pdist_call_count": 10,
+        "pdist_calls_per_score": 2.0,
+        "pdist_cumulative_seconds": 0.0006025969987604185,
+        "pdist_input_shapes": [
+          [
+            12,
+            2
+          ],
+          [
+            12,
+            2
+          ],
+          [
+            12,
+            2
+          ],
+          [
+            12,
+            2
+          ],
+          [
+            12,
+            2
+          ],
+          [
+            12,
+            2
+          ],
+          [
+            12,
+            2
+          ],
+          [
+            12,
+            2
+          ],
+          [
+            12,
+            2
+          ],
+          [
+            12,
+            2
+          ]
+        ]
+      },
+      {
+        "name": "calculate_score_8",
+        "n_localizations": 25,
+        "dimensions": 2,
+        "repetitions": 3,
+        "min_seconds": 0.023181520999969507,
+        "median_seconds": 0.0258223420005379,
+        "mean_seconds": 0.02527382266695592,
+        "std_seconds": 0.0015342602580091548,
+        "peak_tracemalloc_bytes": 18981,
+        "source_n": 50,
+        "retained_fraction": 0.5,
+        "pdist_call_count": 10,
+        "pdist_calls_per_score": 2.0,
+        "pdist_cumulative_seconds": 0.0007390730006591184,
+        "pdist_input_shapes": [
+          [
+            25,
+            2
+          ],
+          [
+            25,
+            2
+          ],
+          [
+            25,
+            2
+          ],
+          [
+            25,
+            2
+          ],
+          [
+            25,
+            2
+          ],
+          [
+            25,
+            2
+          ],
+          [
+            25,
+            2
+          ],
+          [
+            25,
+            2
+          ],
+          [
+            25,
+            2
+          ],
+          [
+            25,
+            2
+          ]
+        ]
+      },
+      {
+        "name": "calculate_score_8",
+        "n_localizations": 37,
+        "dimensions": 2,
+        "repetitions": 3,
+        "min_seconds": 0.030459329999757756,
+        "median_seconds": 0.030719860000317567,
+        "mean_seconds": 0.031196950666829554,
+        "std_seconds": 0.000865490877383312,
+        "peak_tracemalloc_bytes": 20029,
+        "source_n": 50,
+        "retained_fraction": 0.75,
+        "pdist_call_count": 10,
+        "pdist_calls_per_score": 2.0,
+        "pdist_cumulative_seconds": 0.0008676249981363071,
+        "pdist_input_shapes": [
+          [
+            37,
+            2
+          ],
+          [
+            37,
+            2
+          ],
+          [
+            37,
+            2
+          ],
+          [
+            37,
+            2
+          ],
+          [
+            37,
+            2
+          ],
+          [
+            37,
+            2
+          ],
+          [
+            37,
+            2
+          ],
+          [
+            37,
+            2
+          ],
+          [
+            37,
+            2
+          ],
+          [
+            37,
+            2
+          ]
+        ]
+      },
+      {
+        "name": "calculate_score_8",
+        "n_localizations": 50,
+        "dimensions": 2,
+        "repetitions": 3,
+        "min_seconds": 0.03698875100053556,
+        "median_seconds": 0.04452444900016417,
+        "mean_seconds": 0.045486778333421775,
+        "std_seconds": 0.007362990663826334,
+        "peak_tracemalloc_bytes": 27650,
+        "source_n": 50,
+        "retained_fraction": 1.0,
+        "pdist_call_count": 10,
+        "pdist_calls_per_score": 2.0,
+        "pdist_cumulative_seconds": 0.0011816559999715537,
+        "pdist_input_shapes": [
+          [
+            50,
+            2
+          ],
+          [
+            50,
+            2
+          ],
+          [
+            50,
+            2
+          ],
+          [
+            50,
+            2
+          ],
+          [
+            50,
+            2
+          ],
+          [
+            50,
+            2
+          ],
+          [
+            50,
+            2
+          ],
+          [
+            50,
+            2
+          ],
+          [
+            50,
+            2
+          ],
+          [
+            50,
+            2
+          ]
+        ]
+      },
+      {
+        "name": "calculate_score_8",
+        "n_localizations": 25,
+        "dimensions": 2,
+        "repetitions": 3,
+        "min_seconds": 0.05930976499985263,
+        "median_seconds": 0.06582890699974087,
+        "mean_seconds": 0.06373287233327574,
+        "std_seconds": 0.0031290311068714613,
+        "peak_tracemalloc_bytes": 28645,
+        "source_n": 100,
+        "retained_fraction": 0.25,
+        "pdist_call_count": 10,
+        "pdist_calls_per_score": 2.0,
+        "pdist_cumulative_seconds": 0.0007720890016571502,
+        "pdist_input_shapes": [
+          [
+            25,
+            2
+          ],
+          [
+            25,
+            2
+          ],
+          [
+            25,
+            2
+          ],
+          [
+            25,
+            2
+          ],
+          [
+            25,
+            2
+          ],
+          [
+            25,
+            2
+          ],
+          [
+            25,
+            2
+          ],
+          [
+            25,
+            2
+          ],
+          [
+            25,
+            2
+          ],
+          [
+            25,
+            2
+          ]
+        ]
+      },
+      {
+        "name": "calculate_score_8",
+        "n_localizations": 50,
+        "dimensions": 2,
+        "repetitions": 3,
+        "min_seconds": 0.10687998399953358,
+        "median_seconds": 0.1285156050007572,
+        "mean_seconds": 0.1349903713335152,
+        "std_seconds": 0.026001598215509025,
+        "peak_tracemalloc_bytes": 30620,
+        "source_n": 100,
+        "retained_fraction": 0.5,
+        "pdist_call_count": 10,
+        "pdist_calls_per_score": 2.0,
+        "pdist_cumulative_seconds": 0.0012813920011467417,
+        "pdist_input_shapes": [
+          [
+            50,
+            2
+          ],
+          [
+            50,
+            2
+          ],
+          [
+            50,
+            2
+          ],
+          [
+            50,
+            2
+          ],
+          [
+            50,
+            2
+          ],
+          [
+            50,
+            2
+          ],
+          [
+            50,
+            2
+          ],
+          [
+            50,
+            2
+          ],
+          [
+            50,
+            2
+          ],
+          [
+            50,
+            2
+          ]
+        ]
+      },
+      {
+        "name": "calculate_score_8",
+        "n_localizations": 75,
+        "dimensions": 2,
+        "repetitions": 3,
+        "min_seconds": 0.1396289340000294,
+        "median_seconds": 0.15399362399966776,
+        "mean_seconds": 0.15741170066636792,
+        "std_seconds": 0.01609747181434538,
+        "peak_tracemalloc_bytes": null,
+        "source_n": 100,
+        "retained_fraction": 0.75,
+        "pdist_call_count": 8,
+        "pdist_calls_per_score": 2.0,
+        "pdist_cumulative_seconds": 0.0006870180013720528,
+        "pdist_input_shapes": [
+          [
+            75,
+            2
+          ],
+          [
+            75,
+            2
+          ],
+          [
+            75,
+            2
+          ],
+          [
+            75,
+            2
+          ],
+          [
+            75,
+            2
+          ],
+          [
+            75,
+            2
+          ],
+          [
+            75,
+            2
+          ],
+          [
+            75,
+            2
+          ]
+        ]
+      },
+      {
+        "name": "calculate_score_8",
+        "n_localizations": 100,
+        "dimensions": 2,
+        "repetitions": 3,
+        "min_seconds": 0.15194354499999463,
+        "median_seconds": 0.15448277599989524,
+        "mean_seconds": 0.16611597299985684,
+        "std_seconds": 0.018276754539420893,
+        "peak_tracemalloc_bytes": null,
+        "source_n": 100,
+        "retained_fraction": 1.0,
+        "pdist_call_count": 8,
+        "pdist_calls_per_score": 2.0,
+        "pdist_cumulative_seconds": 0.0006474079991676263,
+        "pdist_input_shapes": [
+          [
+            100,
+            2
+          ],
+          [
+            100,
+            2
+          ],
+          [
+            100,
+            2
+          ],
+          [
+            100,
+            2
+          ],
+          [
+            100,
+            2
+          ],
+          [
+            100,
+            2
+          ],
+          [
+            100,
+            2
+          ],
+          [
+            100,
+            2
+          ]
+        ]
+      },
+      {
+        "name": "calculate_score_8",
+        "n_localizations": 50,
+        "dimensions": 2,
+        "repetitions": 3,
+        "min_seconds": 0.2500128120000227,
+        "median_seconds": 0.27283903199986526,
+        "mean_seconds": 0.2680426993335156,
+        "std_seconds": 0.013206167920495952,
+        "peak_tracemalloc_bytes": 50220,
+        "source_n": 200,
+        "retained_fraction": 0.25,
+        "pdist_call_count": 10,
+        "pdist_calls_per_score": 2.0,
+        "pdist_cumulative_seconds": 0.001222688000780181,
+        "pdist_input_shapes": [
+          [
+            50,
+            2
+          ],
+          [
+            50,
+            2
+          ],
+          [
+            50,
+            2
+          ],
+          [
+            50,
+            2
+          ],
+          [
+            50,
+            2
+          ],
+          [
+            50,
+            2
+          ],
+          [
+            50,
+            2
+          ],
+          [
+            50,
+            2
+          ],
+          [
+            50,
+            2
+          ],
+          [
+            50,
+            2
+          ]
+        ]
+      },
+      {
+        "name": "calculate_score_8",
+        "n_localizations": 100,
+        "dimensions": 2,
+        "repetitions": 3,
+        "min_seconds": 0.48164107899992814,
+        "median_seconds": 0.49998282399974414,
+        "mean_seconds": 0.5047389479996127,
+        "std_seconds": 0.021071127116252957,
+        "peak_tracemalloc_bytes": null,
+        "source_n": 200,
+        "retained_fraction": 0.5,
+        "pdist_call_count": 8,
+        "pdist_calls_per_score": 2.0,
+        "pdist_cumulative_seconds": 0.0007029640000837389,
+        "pdist_input_shapes": [
+          [
+            100,
+            2
+          ],
+          [
+            100,
+            2
+          ],
+          [
+            100,
+            2
+          ],
+          [
+            100,
+            2
+          ],
+          [
+            100,
+            2
+          ],
+          [
+            100,
+            2
+          ],
+          [
+            100,
+            2
+          ],
+          [
+            100,
+            2
+          ]
+        ]
+      },
+      {
+        "name": "calculate_score_8",
+        "n_localizations": 150,
+        "dimensions": 2,
+        "repetitions": 3,
+        "min_seconds": 0.6355681479999475,
+        "median_seconds": 0.6568960129998231,
+        "mean_seconds": 0.6612810886666315,
+        "std_seconds": 0.022994744280256784,
+        "peak_tracemalloc_bytes": null,
+        "source_n": 200,
+        "retained_fraction": 0.75,
+        "pdist_call_count": 8,
+        "pdist_calls_per_score": 2.0,
+        "pdist_cumulative_seconds": 0.00315830399904371,
+        "pdist_input_shapes": [
+          [
+            150,
+            2
+          ],
+          [
+            150,
+            2
+          ],
+          [
+            150,
+            2
+          ],
+          [
+            150,
+            2
+          ],
+          [
+            150,
+            2
+          ],
+          [
+            150,
+            2
+          ],
+          [
+            150,
+            2
+          ],
+          [
+            150,
+            2
+          ]
+        ]
+      },
+      {
+        "name": "calculate_score_8",
+        "n_localizations": 200,
+        "dimensions": 2,
+        "repetitions": 3,
+        "min_seconds": 0.6635922630002824,
+        "median_seconds": 0.6854089810003643,
+        "mean_seconds": 0.6911417953333512,
+        "std_seconds": 0.025163177406326686,
+        "peak_tracemalloc_bytes": null,
+        "source_n": 200,
+        "retained_fraction": 1.0,
+        "pdist_call_count": 8,
+        "pdist_calls_per_score": 2.0,
+        "pdist_cumulative_seconds": 0.0010488180005268077,
+        "pdist_input_shapes": [
+          [
+            200,
+            2
+          ],
+          [
+            200,
+            2
+          ],
+          [
+            200,
+            2
+          ],
+          [
+            200,
+            2
+          ],
+          [
+            200,
+            2
+          ],
+          [
+            200,
+            2
+          ],
+          [
+            200,
+            2
+          ],
+          [
+            200,
+            2
+          ]
+        ]
+      },
+      {
+        "name": "calculate_score_8",
+        "n_localizations": 100,
+        "dimensions": 2,
+        "repetitions": 3,
+        "min_seconds": 1.1189162500004386,
+        "median_seconds": 1.2111257269998532,
+        "mean_seconds": 1.1907447873333392,
+        "std_seconds": 0.052350029553370675,
+        "peak_tracemalloc_bytes": null,
+        "source_n": 400,
+        "retained_fraction": 0.25,
+        "pdist_call_count": 8,
+        "pdist_calls_per_score": 2.0,
+        "pdist_cumulative_seconds": 0.0006689239999104757,
+        "pdist_input_shapes": [
+          [
+            100,
+            2
+          ],
+          [
+            100,
+            2
+          ],
+          [
+            100,
+            2
+          ],
+          [
+            100,
+            2
+          ],
+          [
+            100,
+            2
+          ],
+          [
+            100,
+            2
+          ],
+          [
+            100,
+            2
+          ],
+          [
+            100,
+            2
+          ]
+        ]
+      },
+      {
+        "name": "calculate_score_8",
+        "n_localizations": 200,
+        "dimensions": 2,
+        "repetitions": 3,
+        "min_seconds": 1.828788056999656,
+        "median_seconds": 1.8933617560005587,
+        "mean_seconds": 1.8801037226667177,
+        "std_seconds": 0.03767163552570863,
+        "peak_tracemalloc_bytes": null,
+        "source_n": 400,
+        "retained_fraction": 0.5,
+        "pdist_call_count": 8,
+        "pdist_calls_per_score": 2.0,
+        "pdist_cumulative_seconds": 0.0011491820005176123,
+        "pdist_input_shapes": [
+          [
+            200,
+            2
+          ],
+          [
+            200,
+            2
+          ],
+          [
+            200,
+            2
+          ],
+          [
+            200,
+            2
+          ],
+          [
+            200,
+            2
+          ],
+          [
+            200,
+            2
+          ],
+          [
+            200,
+            2
+          ],
+          [
+            200,
+            2
+          ]
+        ]
+      },
+      {
+        "name": "calculate_score_8",
+        "n_localizations": 300,
+        "dimensions": 2,
+        "repetitions": 3,
+        "min_seconds": 2.350856348999514,
+        "median_seconds": 2.4037597699998514,
+        "mean_seconds": 2.3875048146664994,
+        "std_seconds": 0.02596939783900461,
+        "peak_tracemalloc_bytes": null,
+        "source_n": 400,
+        "retained_fraction": 0.75,
+        "pdist_call_count": 8,
+        "pdist_calls_per_score": 2.0,
+        "pdist_cumulative_seconds": 0.0033543390009072027,
+        "pdist_input_shapes": [
+          [
+            300,
+            2
+          ],
+          [
+            300,
+            2
+          ],
+          [
+            300,
+            2
+          ],
+          [
+            300,
+            2
+          ],
+          [
+            300,
+            2
+          ],
+          [
+            300,
+            2
+          ],
+          [
+            300,
+            2
+          ],
+          [
+            300,
+            2
+          ]
+        ]
+      },
+      {
+        "name": "calculate_score_8",
+        "n_localizations": 400,
+        "dimensions": 2,
+        "repetitions": 3,
+        "min_seconds": 2.7872670399992785,
+        "median_seconds": 2.8321247720004976,
+        "mean_seconds": 2.8504101633331325,
+        "std_seconds": 0.06042078163825354,
+        "peak_tracemalloc_bytes": null,
+        "source_n": 400,
+        "retained_fraction": 1.0,
+        "pdist_call_count": 8,
+        "pdist_calls_per_score": 2.0,
+        "pdist_cumulative_seconds": 0.0198215109994635,
+        "pdist_input_shapes": [
+          [
+            400,
+            2
+          ],
+          [
+            400,
+            2
+          ],
+          [
+            400,
+            2
+          ],
+          [
+            400,
+            2
+          ],
+          [
+            400,
+            2
+          ],
+          [
+            400,
+            2
+          ],
+          [
+            400,
+            2
+          ],
+          [
+            400,
+            2
+          ]
+        ]
+      }
+    ],
+    "mcmc": [
+      {
+        "requested": 1,
+        "calls": 14,
+        "seconds": 0.0006898960000398802,
+        "fraction": 0.018458011606746146,
+        "shapes": [
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ]
+        ]
+      },
+      {
+        "requested": 10,
+        "calls": 32,
+        "seconds": 0.0034176809967902955,
+        "fraction": 0.01335333742980741,
+        "shapes": [
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ]
+        ]
+      },
+      {
+        "requested": 50,
+        "calls": 112,
+        "seconds": 0.006256073997064959,
+        "fraction": 0.01457161247576572,
+        "shapes": [
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ],
+          [
+            23,
+            2
+          ]
+        ]
+      }
+    ]
+  },
+  "total_benchmark_runtime_seconds": 83.28364944199984
+}

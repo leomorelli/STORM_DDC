@@ -1,0 +1,42 @@
+[
+  {
+    "version": "optimized",
+    "workers": 1,
+    "seconds": 12.420547499999884,
+    "rois": 4,
+    "native_kernels": true,
+    "localizations": [
+      988,
+      978,
+      991,
+      999
+    ],
+    "final_steps": [
+      12,
+      12,
+      12,
+      12
+    ],
+    "equal_to_first_run": true
+  },
+  {
+    "version": "optimized",
+    "workers": 4,
+    "seconds": 11.94620009999926,
+    "rois": 4,
+    "native_kernels": true,
+    "localizations": [
+      988,
+      978,
+      991,
+      999
+    ],
+    "final_steps": [
+      12,
+      12,
+      12,
+      12
+    ],
+    "equal_to_first_run": true
+  }
+]

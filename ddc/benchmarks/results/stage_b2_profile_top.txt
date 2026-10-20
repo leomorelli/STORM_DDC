@@ -1,0 +1,79 @@
+TOP 30 BY CUMULATIVE TIME
+         318 function calls in 0.003 seconds
+
+   Ordered by: cumulative time
+   List reduced from 95 to 30 due to restriction <30>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.003    0.003 likelihood.py:143(calculate_score_8)
+        2    0.000    0.000    0.001    0.001 benchmark_b2_likelihood.py:78(counted_pdist)
+        2    0.000    0.000    0.001    0.001 distance.py:1816(pdist)
+        2    0.000    0.000    0.001    0.001 _lazy.py:57(lazy_apply)
+        2    0.000    0.000    0.001    0.001 _lazy.py:333(wrapper)
+        2    0.000    0.000    0.001    0.001 distance.py:2110(_np_pdist)
+        2    0.001    0.001    0.001    0.001 {built-in method scipy.spatial._distance_pybind.pdist_euclidean}
+        1    0.000    0.000    0.001    0.001 distributions.py:139(_frame_pair_distances)
+        1    0.000    0.000    0.001    0.001 benchmark_b2_likelihood.py:83(counted_intersect)
+        1    0.000    0.000    0.001    0.001 likelihood.py:46(matlab_intersect_first)
+        1    0.000    0.000    0.001    0.001 likelihood.py:65(_intersect_float64_first)
+        2    0.000    0.000    0.001    0.000 _arraysetops_impl.py:145(unique)
+        2    0.000    0.000    0.000    0.000 _arraysetops_impl.py:348(_unique1d)
+        2    0.000    0.000    0.000    0.000 {method 'argsort' of 'numpy.ndarray' objects}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+        1    0.000    0.000    0.000    0.000 likelihood.py:126(_probability_columns)
+        1    0.000    0.000    0.000    0.000 fromnumeric.py:1446(searchsorted)
+        2    0.000    0.000    0.000    0.000 _array_api.py:75(_asarray)
+        2    0.000    0.000    0.000    0.000 _lazy.py:316(_lazy_apply_wrapper)
+        4    0.000    0.000    0.000    0.000 fromnumeric.py:2477(any)
+        1    0.000    0.000    0.000    0.000 fromnumeric.py:51(_wrapfunc)
+        1    0.000    0.000    0.000    0.000 {method 'searchsorted' of 'numpy.ndarray' objects}
+        2    0.000    0.000    0.000    0.000 _aliases.py:70(asarray)
+        4    0.000    0.000    0.000    0.000 fromnumeric.py:89(_wrapreduction_any_all)
+       15    0.000    0.000    0.000    0.000 {built-in method builtins.isinstance}
+        3    0.000    0.000    0.000    0.000 mock.py:1650(_patch_object)
+        3    0.000    0.000    0.000    0.000 mock.py:1443(__enter__)
+        3    0.000    0.000    0.000    0.000 mock.py:1597(__exit__)
+        2    0.000    0.000    0.000    0.000 functools.py:35(update_wrapper)
+        1    0.000    0.000    0.000    0.000 _shape_base_impl.py:628(column_stack)
+
+
+
+TOP 30 BY SELF TIME
+         318 function calls in 0.003 seconds
+
+   Ordered by: internal time
+   List reduced from 95 to 30 due to restriction <30>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        2    0.001    0.001    0.001    0.001 {built-in method scipy.spatial._distance_pybind.pdist_euclidean}
+        2    0.000    0.000    0.000    0.000 {method 'argsort' of 'numpy.ndarray' objects}
+        1    0.000    0.000    0.003    0.003 likelihood.py:143(calculate_score_8)
+        1    0.000    0.000    0.001    0.001 likelihood.py:65(_intersect_float64_first)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+        2    0.000    0.000    0.000    0.000 _arraysetops_impl.py:348(_unique1d)
+        2    0.000    0.000    0.000    0.000 _array_api.py:75(_asarray)
+        2    0.000    0.000    0.001    0.001 _lazy.py:57(lazy_apply)
+        1    0.000    0.000    0.000    0.000 {method 'searchsorted' of 'numpy.ndarray' objects}
+        2    0.000    0.000    0.001    0.001 distance.py:1816(pdist)
+        2    0.000    0.000    0.001    0.001 _lazy.py:333(wrapper)
+        1    0.000    0.000    0.000    0.000 likelihood.py:126(_probability_columns)
+        5    0.000    0.000    0.000    0.000 {method 'reduce' of 'numpy.ufunc' objects}
+        2    0.000    0.000    0.001    0.001 distance.py:2110(_np_pdist)
+        1    0.000    0.000    0.000    0.000 _shape_base_impl.py:628(column_stack)
+        2    0.000    0.000    0.001    0.000 _arraysetops_impl.py:145(unique)
+        3    0.000    0.000    0.000    0.000 mock.py:1443(__enter__)
+        1    0.000    0.000    0.001    0.001 distributions.py:139(_frame_pair_distances)
+        6    0.000    0.000    0.000    0.000 {method 'reshape' of 'numpy.ndarray' objects}
+        1    0.000    0.000    0.001    0.001 likelihood.py:46(matlab_intersect_first)
+        4    0.000    0.000    0.000    0.000 {built-in method numpy.array}
+        2    0.000    0.000    0.001    0.001 benchmark_b2_likelihood.py:78(counted_pdist)
+        2    0.000    0.000    0.000    0.000 functools.py:35(update_wrapper)
+        4    0.000    0.000    0.000    0.000 fromnumeric.py:89(_wrapreduction_any_all)
+        2    0.000    0.000    0.000    0.000 _aliases.py:70(asarray)
+        3    0.000    0.000    0.000    0.000 mock.py:1650(_patch_object)
+        3    0.000    0.000    0.000    0.000 mock.py:1597(__exit__)
+        2    0.000    0.000    0.000    0.000 _lazy.py:316(_lazy_apply_wrapper)
+       15    0.000    0.000    0.000    0.000 {built-in method builtins.isinstance}
+        1    0.000    0.000    0.000    0.000 numeric.py:171(ones)
+
+

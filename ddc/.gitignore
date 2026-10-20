@@ -1,0 +1,41 @@
+# Python environments, caches, and compiled build products
+__pycache__/
+*.py[cod]
+*.pyd
+*.so
+*.dll
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
+.venv/
+venv/
+
+# Local experiment data, generated analysis output, and archives
+/data/
+/results/
+/results.zip
+DDC-main/**/Analyzed_*.mat
+DDC-main/**/temp_file_*.mat
+*.prof
+
+# Notebook checkpoints, local editor state, and scratch screenshots
+.ipynb_checkpoints/
+.vscode/
+.idea/
+/Python*.bmp
+/Untitled.png
+Thumbs.db
+.DS_Store
+~$*
+
+# Local credentials/configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key

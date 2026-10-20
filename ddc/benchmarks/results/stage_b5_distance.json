@@ -1,0 +1,417 @@
+{
+  "environment": {
+    "python": "3.12.13",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "platform": "Linux-6.18.35-x86_64-with-glibc2.39",
+    "architecture": "x86_64",
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8370C CPU @ 2.80GHz",
+    "logical_cores": 9,
+    "total_ram_bytes": 17106231296,
+    "environment_variables": {
+      "OMP_NUM_THREADS": null,
+      "OPENBLAS_NUM_THREADS": null,
+      "MKL_NUM_THREADS": null
+    }
+  },
+  "algorithm": "vectorized finite floating-frame candidate discovery; unchanged scalar coordinate distance and append order",
+  "rows": [
+    {
+      "n_localizations": 25,
+      "B": 2,
+      "total_pairs_considered": 325,
+      "accepted_pairs": 47,
+      "output_distances": 47,
+      "B.3": {
+        "repetitions": 3,
+        "minimum_seconds": 0.0020828760007134406,
+        "median_seconds": 0.0026437790002091788,
+        "mean_seconds": 0.0025568583332642447
+      },
+      "B.5": {
+        "repetitions": 10,
+        "minimum_seconds": 0.0006819919999543345,
+        "median_seconds": 0.0008318875006807502,
+        "mean_seconds": 0.0008375893001357326
+      },
+      "speedup": 3.1780487121704812,
+      "B.3_peak_tracemalloc_bytes": 5888,
+      "B.5_peak_tracemalloc_bytes": 5888
+    },
+    {
+      "n_localizations": 25,
+      "B": 10,
+      "total_pairs_considered": 325,
+      "accepted_pairs": 195,
+      "output_distances": 195,
+      "B.3": {
+        "repetitions": 3,
+        "minimum_seconds": 0.003331214000354521,
+        "median_seconds": 0.00351633500031312,
+        "mean_seconds": 0.0035029716667243824
+      },
+      "B.5": {
+        "repetitions": 10,
+        "minimum_seconds": 0.0019300910007586936,
+        "median_seconds": 0.0019887709995600744,
+        "mean_seconds": 0.002091984899743693
+      },
+      "speedup": 1.7680944669300538,
+      "B.3_peak_tracemalloc_bytes": 5888,
+      "B.5_peak_tracemalloc_bytes": 6425
+    },
+    {
+      "n_localizations": 25,
+      "B": 50,
+      "total_pairs_considered": 325,
+      "accepted_pairs": 300,
+      "output_distances": 300,
+      "B.3": {
+        "repetitions": 3,
+        "minimum_seconds": 0.005096438999316888,
+        "median_seconds": 0.005818048000946874,
+        "mean_seconds": 0.0059891186665481655
+      },
+      "B.5": {
+        "repetitions": 10,
+        "minimum_seconds": 0.0028784450005332474,
+        "median_seconds": 0.0029820890003975364,
+        "mean_seconds": 0.0030879109999659704
+      },
+      "speedup": 1.9509974384303357,
+      "B.3_peak_tracemalloc_bytes": 11312,
+      "B.5_peak_tracemalloc_bytes": 12059
+    },
+    {
+      "n_localizations": 50,
+      "B": 2,
+      "total_pairs_considered": 1275,
+      "accepted_pairs": 97,
+      "output_distances": 97,
+      "B.3": {
+        "repetitions": 3,
+        "minimum_seconds": 0.007635276999280904,
+        "median_seconds": 0.007934445999126183,
+        "mean_seconds": 0.00802650733263969
+      },
+      "B.5": {
+        "repetitions": 10,
+        "minimum_seconds": 0.0013538690000132192,
+        "median_seconds": 0.0017036045001077582,
+        "mean_seconds": 0.001789064500007953
+      },
+      "speedup": 4.657446020261337,
+      "B.3_peak_tracemalloc_bytes": 6088,
+      "B.5_peak_tracemalloc_bytes": 6088
+    },
+    {
+      "n_localizations": 50,
+      "B": 10,
+      "total_pairs_considered": 1275,
+      "accepted_pairs": 445,
+      "output_distances": 445,
+      "B.3": {
+        "repetitions": 3,
+        "minimum_seconds": 0.011640946999250446,
+        "median_seconds": 0.011759754001104739,
+        "mean_seconds": 0.012130057333706645
+      },
+      "B.5": {
+        "repetitions": 10,
+        "minimum_seconds": 0.0045139829999243375,
+        "median_seconds": 0.004799349499990058,
+        "mean_seconds": 0.0049260227000559095
+      },
+      "speedup": 2.4502808143330883,
+      "B.3_peak_tracemalloc_bytes": 8723,
+      "B.5_peak_tracemalloc_bytes": 9425
+    },
+    {
+      "n_localizations": 50,
+      "B": 50,
+      "total_pairs_considered": 1275,
+      "accepted_pairs": 1225,
+      "output_distances": 1225,
+      "B.3": {
+        "repetitions": 3,
+        "minimum_seconds": 0.018358978999458486,
+        "median_seconds": 0.019657063001432107,
+        "mean_seconds": 0.01967141766666221
+      },
+      "B.5": {
+        "repetitions": 10,
+        "minimum_seconds": 0.011891182999534067,
+        "median_seconds": 0.01518882250002207,
+        "mean_seconds": 0.015073648800171213
+      },
+      "speedup": 1.2941795192750158,
+      "B.3_peak_tracemalloc_bytes": 19732,
+      "B.5_peak_tracemalloc_bytes": 20434
+    },
+    {
+      "n_localizations": 100,
+      "B": 2,
+      "total_pairs_considered": 5050,
+      "accepted_pairs": 197,
+      "output_distances": 197,
+      "B.3": {
+        "repetitions": 3,
+        "minimum_seconds": 0.02680497499932244,
+        "median_seconds": 0.027465094999570283,
+        "mean_seconds": 0.027380119666001217
+      },
+      "B.5": {
+        "repetitions": 10,
+        "minimum_seconds": 0.002678211001693853,
+        "median_seconds": 0.002721966500757844,
+        "mean_seconds": 0.0027613163001660723
+      },
+      "speedup": 10.090166426340481,
+      "B.3_peak_tracemalloc_bytes": 7910,
+      "B.5_peak_tracemalloc_bytes": 9202
+    },
+    {
+      "n_localizations": 100,
+      "B": 10,
+      "total_pairs_considered": 5050,
+      "accepted_pairs": 945,
+      "output_distances": 945,
+      "B.3": {
+        "repetitions": 3,
+        "minimum_seconds": 0.03300206899984914,
+        "median_seconds": 0.033145819999845116,
+        "mean_seconds": 0.039038862333351666
+      },
+      "B.5": {
+        "repetitions": 10,
+        "minimum_seconds": 0.009325830000307178,
+        "median_seconds": 0.009719997499814781,
+        "mean_seconds": 0.010119622100137348
+      },
+      "speedup": 3.410064663131521,
+      "B.3_peak_tracemalloc_bytes": 14886,
+      "B.5_peak_tracemalloc_bytes": 15633
+    },
+    {
+      "n_localizations": 100,
+      "B": 50,
+      "total_pairs_considered": 5050,
+      "accepted_pairs": 3725,
+      "output_distances": 3725,
+      "B.3": {
+        "repetitions": 3,
+        "minimum_seconds": 0.06263688299986825,
+        "median_seconds": 0.06846955300170521,
+        "mean_seconds": 0.07430560733397822
+      },
+      "B.5": {
+        "repetitions": 10,
+        "minimum_seconds": 0.033855211000627605,
+        "median_seconds": 0.03551798050011712,
+        "mean_seconds": 0.03823692270016181
+      },
+      "speedup": 1.9277434143948424,
+      "B.3_peak_tracemalloc_bytes": 41894,
+      "B.5_peak_tracemalloc_bytes": 42641
+    },
+    {
+      "n_localizations": 200,
+      "B": 2,
+      "total_pairs_considered": 20100,
+      "accepted_pairs": 397,
+      "output_distances": 397,
+      "B.3": {
+        "repetitions": 3,
+        "minimum_seconds": 0.10601690699877508,
+        "median_seconds": 0.10661880200132146,
+        "mean_seconds": 0.10677767533282652
+      },
+      "B.5": {
+        "repetitions": 10,
+        "minimum_seconds": 0.0056214610012830235,
+        "median_seconds": 0.005825975499647029,
+        "mean_seconds": 0.005863813200085133
+      },
+      "speedup": 18.300592236919126,
+      "B.3_peak_tracemalloc_bytes": 14310,
+      "B.5_peak_tracemalloc_bytes": 16241
+    },
+    {
+      "n_localizations": 200,
+      "B": 10,
+      "total_pairs_considered": 20100,
+      "accepted_pairs": 1945,
+      "output_distances": 1945,
+      "B.3": {
+        "repetitions": 3,
+        "minimum_seconds": 0.12108265099959681,
+        "median_seconds": 0.12165491899941117,
+        "mean_seconds": 0.1235844309994718
+      },
+      "B.5": {
+        "repetitions": 10,
+        "minimum_seconds": 0.01899475200116285,
+        "median_seconds": 0.020353558500573854,
+        "mean_seconds": 0.021037221800361293
+      },
+      "speedup": 5.977083515689956,
+      "B.3_peak_tracemalloc_bytes": 27686,
+      "B.5_peak_tracemalloc_bytes": 28433
+    },
+    {
+      "n_localizations": 200,
+      "B": 50,
+      "total_pairs_considered": 20100,
+      "accepted_pairs": 8725,
+      "output_distances": 8725,
+      "B.3": {
+        "repetitions": 3,
+        "minimum_seconds": 0.1799662579996948,
+        "median_seconds": 0.18316457599939895,
+        "mean_seconds": 0.20624467899991336
+      },
+      "B.5": {
+        "repetitions": 10,
+        "minimum_seconds": 0.07884621499943023,
+        "median_seconds": 0.08120283450080024,
+        "mean_seconds": 0.08182177480030077
+      },
+      "speedup": 2.255642640129685,
+      "B.3_peak_tracemalloc_bytes": 86694,
+      "B.5_peak_tracemalloc_bytes": 87441
+    },
+    {
+      "n_localizations": 400,
+      "B": 2,
+      "total_pairs_considered": 80200,
+      "accepted_pairs": 797,
+      "output_distances": 797,
+      "B.3": {
+        "repetitions": 3,
+        "minimum_seconds": 0.4348340510005073,
+        "median_seconds": 0.44807002500056115,
+        "mean_seconds": 0.45447790800002014
+      },
+      "B.5": {
+        "repetitions": 10,
+        "minimum_seconds": 0.012849407001340296,
+        "median_seconds": 0.01748472449980909,
+        "mean_seconds": 0.017960183700233757
+      },
+      "speedup": 25.62637032144564,
+      "B.3_peak_tracemalloc_bytes": 27219,
+      "B.5_peak_tracemalloc_bytes": 30641
+    },
+    {
+      "n_localizations": 400,
+      "B": 10,
+      "total_pairs_considered": 80200,
+      "accepted_pairs": 3945,
+      "output_distances": 3945,
+      "B.3": {
+        "repetitions": 3,
+        "minimum_seconds": 0.4746806919993105,
+        "median_seconds": 0.48108887399939704,
+        "mean_seconds": 0.48214397899937467
+      },
+      "B.5": {
+        "repetitions": 10,
+        "minimum_seconds": 0.03948515600131941,
+        "median_seconds": 0.04085117900012847,
+        "mean_seconds": 0.04415276250001625
+      },
+      "speedup": 11.77662152658762,
+      "B.3_peak_tracemalloc_bytes": 53395,
+      "B.5_peak_tracemalloc_bytes": 54097
+    },
+    {
+      "n_localizations": 400,
+      "B": 50,
+      "total_pairs_considered": 80200,
+      "accepted_pairs": 18725,
+      "output_distances": 18725,
+      "B.3": {
+        "repetitions": 3,
+        "minimum_seconds": 0.64424047600005,
+        "median_seconds": 0.7497933929989813,
+        "mean_seconds": 0.7210364769992642
+      },
+      "B.5": {
+        "repetitions": 10,
+        "minimum_seconds": 0.17430957599935937,
+        "median_seconds": 0.21858258900010696,
+        "mean_seconds": 0.2136114089998955
+      },
+      "speedup": 3.4302521368644525,
+      "B.3_peak_tracemalloc_bytes": 176403,
+      "B.5_peak_tracemalloc_bytes": 177105
+    },
+    {
+      "n_localizations": 800,
+      "B": 2,
+      "total_pairs_considered": 320400,
+      "accepted_pairs": 1597,
+      "output_distances": 1597,
+      "B.3": {
+        "repetitions": 1,
+        "minimum_seconds": 2.1102016269996966,
+        "median_seconds": 2.1102016269996966,
+        "mean_seconds": 2.1102016269996966
+      },
+      "B.5": {
+        "repetitions": 5,
+        "minimum_seconds": 0.024023005998969893,
+        "median_seconds": 0.024311379000209854,
+        "mean_seconds": 0.024654576800458017
+      },
+      "speedup": 86.79892765365064,
+      "B.3_peak_tracemalloc_bytes": 52846,
+      "B.5_peak_tracemalloc_bytes": 59441
+    },
+    {
+      "n_localizations": 800,
+      "B": 10,
+      "total_pairs_considered": 320400,
+      "accepted_pairs": 7945,
+      "output_distances": 7945,
+      "B.3": {
+        "repetitions": 1,
+        "minimum_seconds": 1.9688946410005883,
+        "median_seconds": 1.9688946410005883,
+        "mean_seconds": 1.9688946410005883
+      },
+      "B.5": {
+        "repetitions": 5,
+        "minimum_seconds": 0.08212898599958862,
+        "median_seconds": 0.11176559100022132,
+        "mean_seconds": 0.11155609819979873
+      },
+      "speedup": 17.616286223518376,
+      "B.3_peak_tracemalloc_bytes": 104622,
+      "B.5_peak_tracemalloc_bytes": 105297
+    },
+    {
+      "n_localizations": 800,
+      "B": 50,
+      "total_pairs_considered": 320400,
+      "accepted_pairs": 38725,
+      "output_distances": 38725,
+      "B.3": {
+        "repetitions": 1,
+        "minimum_seconds": 2.649153082000339,
+        "median_seconds": 2.649153082000339,
+        "mean_seconds": 2.649153082000339
+      },
+      "B.5": {
+        "repetitions": 5,
+        "minimum_seconds": 0.37965007700040587,
+        "median_seconds": 0.5285445109984721,
+        "mean_seconds": 0.5028338965996226
+      },
+      "speedup": 5.0121664814867355,
+      "B.3_peak_tracemalloc_bytes": 355630,
+      "B.5_peak_tracemalloc_bytes": 356305
+    }
+  ],
+  "total_seconds": 87.46341815800042
+}

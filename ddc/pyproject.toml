@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=69", "Cython>=3.1,<4"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "python-ddc"
+version = "0.1.0"
+description = "Python port of the DDC SMLM correction pipeline"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "h5py>=3.10",
+    "hdf5storage>=0.2.2",
+    "matplotlib>=3.7",
+]
+
+[project.scripts]
+ddc = "ddc.cli:main"
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+addopts = "-ra"
+testpaths = ["tests"]

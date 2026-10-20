@@ -1,0 +1,23 @@
+[
+  {
+    "version": "before",
+    "workers": 1,
+    "seconds": 1.0379121000005398,
+    "rois": 4,
+    "equal_to_first_run": true
+  },
+  {
+    "version": "optimized",
+    "workers": 1,
+    "seconds": 0.8057257000000391,
+    "rois": 4,
+    "equal_to_first_run": true
+  },
+  {
+    "version": "optimized",
+    "workers": 4,
+    "seconds": 1.6637654000005568,
+    "rois": 4,
+    "equal_to_first_run": true
+  }
+]

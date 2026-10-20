@@ -1,0 +1,17 @@
+name: ddc-stage-b
+
+channels:
+  - conda-forge
+
+dependencies:
+  - python=3.12.13
+  - pip
+  - setuptools>=69
+  - wheel
+  - pip:
+      - numpy==2.3.5
+      - scipy==1.17.0
+      - h5py==3.14.0
+      - hdf5storage==0.2.2
+      - matplotlib>=3.7
+      - pytest==9.1.1

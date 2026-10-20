@@ -1,0 +1,79 @@
+TOP 30 BY CUMULATIVE TIME
+         405634 function calls (405620 primitive calls) in 0.652 seconds
+
+   Ordered by: cumulative time
+   List reduced from 337 to 30 due to restriction <30>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.652    0.652 benchmark_b4_mcmc.py:91(execute)
+        1    0.004    0.004    0.647    0.647 mcmc.py:400(run_mcmc)
+      143    0.003    0.000    0.566    0.004 benchmark_b4_mcmc.py:58(wrap_eliminator)
+      143    0.115    0.001    0.553    0.004 mcmc.py:221(_eliminate_blinking_de_loc15)
+     3146    0.014    0.000    0.223    0.000 benchmark_b4_mcmc.py:74(call)
+     3168    0.029    0.000    0.205    0.000 probabilities.py:71(_frame_cross_distances)
+     6336    0.095    0.000    0.205    0.000 probabilities.py:60(_matlab_pairwise_expression)
+     3146    0.020    0.000    0.134    0.000 benchmark_b4_mcmc.py:64(call)
+    13485    0.019    0.000    0.090    0.000 fromnumeric.py:2338(sum)
+    16659    0.036    0.000    0.083    0.000 fromnumeric.py:69(_wrapreduction)
+      195    0.001    0.000    0.058    0.000 benchmark_b4_mcmc.py:84(call)
+    22444    0.056    0.000    0.056    0.000 {method 'reduce' of 'numpy.ufunc' objects}
+     6392    0.031    0.000    0.044    0.000 _shape_base_impl.py:628(column_stack)
+       51    0.004    0.000    0.026    0.001 likelihood.py:143(calculate_score_8)
+     8238    0.011    0.000    0.025    0.000 numerictypes.py:475(issubdtype)
+     1675    0.003    0.000    0.025    0.000 fromnumeric.py:3735(mean)
+     1675    0.008    0.000    0.022    0.000 _methods.py:117(_mean)
+     3172    0.004    0.000    0.020    0.000 fromnumeric.py:3052(max)
+      143    0.014    0.000    0.019    0.000 mcmc.py:336(_proposal_parameters)
+     3428    0.003    0.000    0.016    0.000 fromnumeric.py:2477(any)
+      532    0.002    0.000    0.015    0.000 _arraysetops_impl.py:145(unique)
+     3611    0.005    0.000    0.014    0.000 fromnumeric.py:89(_wrapreduction_any_all)
+     6956    0.007    0.000    0.014    0.000 _ufunc_config.py:448(__enter__)
+    19327    0.013    0.000    0.013    0.000 {built-in method numpy.array}
+    16476    0.008    0.000    0.013    0.000 numerictypes.py:293(issubclass_)
+    11784    0.012    0.000    0.012    0.000 {method 'reshape' of 'numpy.ndarray' objects}
+      113    0.001    0.000    0.012    0.000 distance.py:1816(pdist)
+      532    0.008    0.000    0.012    0.000 _arraysetops_impl.py:348(_unique1d)
+        1    0.004    0.004    0.012    0.012 trajectories.py:111(density_calc)
+      113    0.002    0.000    0.010    0.000 _lazy.py:57(lazy_apply)
+
+
+
+TOP 30 BY SELF TIME
+         405634 function calls (405620 primitive calls) in 0.652 seconds
+
+   Ordered by: internal time
+   List reduced from 337 to 30 due to restriction <30>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+      143    0.115    0.001    0.553    0.004 mcmc.py:221(_eliminate_blinking_de_loc15)
+     6336    0.095    0.000    0.205    0.000 probabilities.py:60(_matlab_pairwise_expression)
+    22444    0.056    0.000    0.056    0.000 {method 'reduce' of 'numpy.ufunc' objects}
+    16659    0.036    0.000    0.083    0.000 fromnumeric.py:69(_wrapreduction)
+     6392    0.031    0.000    0.044    0.000 _shape_base_impl.py:628(column_stack)
+     3168    0.029    0.000    0.205    0.000 probabilities.py:71(_frame_cross_distances)
+     3146    0.020    0.000    0.134    0.000 benchmark_b4_mcmc.py:64(call)
+    13485    0.019    0.000    0.090    0.000 fromnumeric.py:2338(sum)
+      143    0.014    0.000    0.019    0.000 mcmc.py:336(_proposal_parameters)
+     3146    0.014    0.000    0.223    0.000 benchmark_b4_mcmc.py:74(call)
+    19327    0.013    0.000    0.013    0.000 {built-in method numpy.array}
+    11784    0.012    0.000    0.012    0.000 {method 'reshape' of 'numpy.ndarray' objects}
+     8238    0.011    0.000    0.025    0.000 numerictypes.py:475(issubdtype)
+     1675    0.008    0.000    0.022    0.000 _methods.py:117(_mean)
+    16476    0.008    0.000    0.013    0.000 numerictypes.py:293(issubclass_)
+      532    0.008    0.000    0.012    0.000 _arraysetops_impl.py:348(_unique1d)
+    28162    0.007    0.000    0.007    0.000 {built-in method builtins.issubclass}
+     6956    0.007    0.000    0.014    0.000 _ufunc_config.py:448(__enter__)
+     1675    0.006    0.000    0.007    0.000 _methods.py:75(_count_reduce_items)
+    20270    0.006    0.000    0.006    0.000 {method 'items' of 'dict' objects}
+     3611    0.005    0.000    0.014    0.000 fromnumeric.py:89(_wrapreduction_any_all)
+    12584    0.005    0.000    0.005    0.000 {method 'tobytes' of 'numpy.ndarray' objects}
+    16590    0.004    0.000    0.005    0.000 {built-in method builtins.isinstance}
+     6956    0.004    0.000    0.008    0.000 _ufunc_config.py:464(__exit__)
+     3172    0.004    0.000    0.020    0.000 fromnumeric.py:3052(max)
+     6395    0.004    0.000    0.006    0.000 shape_base.py:208(_arrays_for_stack_dispatcher)
+        1    0.004    0.004    0.647    0.647 mcmc.py:400(run_mcmc)
+        1    0.004    0.004    0.012    0.012 trajectories.py:111(density_calc)
+     6957    0.004    0.000    0.004    0.000 {built-in method numpy._core._multiarray_umath._make_extobj}
+     6957    0.004    0.000    0.004    0.000 {method 'reset' of '_contextvars.ContextVar' objects}
+
+

@@ -1,0 +1,78 @@
+[
+  {
+    "version": "before",
+    "workers": 1,
+    "seconds": 178.13257200000044,
+    "rois": 4,
+    "localizations": [
+      988,
+      978,
+      991,
+      999
+    ],
+    "final_steps": [
+      12,
+      12,
+      12,
+      12
+    ],
+    "equal_to_first_run": true
+  },
+  {
+    "version": "optimized",
+    "workers": 1,
+    "seconds": 101.11099819999981,
+    "rois": 4,
+    "localizations": [
+      988,
+      978,
+      991,
+      999
+    ],
+    "final_steps": [
+      12,
+      12,
+      12,
+      12
+    ],
+    "equal_to_first_run": true
+  },
+  {
+    "version": "optimized",
+    "workers": 2,
+    "seconds": 49.10935830000017,
+    "rois": 4,
+    "localizations": [
+      988,
+      978,
+      991,
+      999
+    ],
+    "final_steps": [
+      12,
+      12,
+      12,
+      12
+    ],
+    "equal_to_first_run": true
+  },
+  {
+    "version": "optimized",
+    "workers": 4,
+    "seconds": 25.806451800001014,
+    "rois": 4,
+    "localizations": [
+      988,
+      978,
+      991,
+      999
+    ],
+    "final_steps": [
+      12,
+      12,
+      12,
+      12
+    ],
+    "equal_to_first_run": true
+  }
+]

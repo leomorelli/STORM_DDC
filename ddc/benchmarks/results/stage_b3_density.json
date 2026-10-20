@@ -1,0 +1,434 @@
+{
+  "environment": {
+    "python": "3.12.13",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "platform": "Linux-6.18.35-x86_64-with-glibc2.39",
+    "architecture": "x86_64",
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8370C CPU @ 2.80GHz",
+    "logical_cores": 9,
+    "total_ram_bytes": 17106231296,
+    "environment_variables": {
+      "OMP_NUM_THREADS": null,
+      "OPENBLAS_NUM_THREADS": null,
+      "MKL_NUM_THREADS": null
+    }
+  },
+  "references": {
+    "frozen_stage_a_sha256": "a54496a4c08591fee307314ef95a2046b8c4c4e59c710ec913549691a1441279",
+    "accepted_b2_review_sha256": "61c19e3af0a368b5e28fc65449e5c065cd50841478d6242d47a9d087cd3c42e8",
+    "accepted_b4_review_sha256": "cb4aeca40f8b7cfcb62c6e544796568c6dac6554609c773b35bdbbe61c7a9eb8"
+  },
+  "methodology": {
+    "same_machine_before_after": true,
+    "warmups_per_measurement": 1,
+    "selected_block_size": 32,
+    "temporary_memory_complexity": "O(block_size * n * d)",
+    "arithmetic_complexity": "O(n^2 * d)"
+  },
+  "density_benchmarks": [
+    {
+      "n_localizations": 25,
+      "b4": {
+        "repetitions": 3,
+        "minimum_seconds": 0.008416501001192955,
+        "median_seconds": 0.009575206000590697,
+        "mean_seconds": 0.00932178500079317
+      },
+      "b3": {
+        "repetitions": 20,
+        "minimum_seconds": 7.865200132073369e-05,
+        "median_seconds": 8.18919997982448e-05,
+        "mean_seconds": 0.00010768029997052509
+      },
+      "speedup": 116.92480369487721,
+      "b4_peak_tracemalloc_bytes": 2040,
+      "b3_peak_tracemalloc_bytes": 47488,
+      "estimated_max_block_temporary_bytes": 25000
+    },
+    {
+      "n_localizations": 50,
+      "b4": {
+        "repetitions": 3,
+        "minimum_seconds": 0.03255661500043061,
+        "median_seconds": 0.03318402399963816,
+        "mean_seconds": 0.03541698233311763
+      },
+      "b3": {
+        "repetitions": 20,
+        "minimum_seconds": 0.00018064299911202397,
+        "median_seconds": 0.00018562550030765124,
+        "mean_seconds": 0.00019409225005802
+      },
+      "speedup": 178.76867103194203,
+      "b4_peak_tracemalloc_bytes": 2240,
+      "b3_peak_tracemalloc_bytes": 133672,
+      "estimated_max_block_temporary_bytes": 64000
+    },
+    {
+      "n_localizations": 100,
+      "b4": {
+        "repetitions": 3,
+        "minimum_seconds": 0.121973703000549,
+        "median_seconds": 0.13369618300021102,
+        "mean_seconds": 0.13379728066684038
+      },
+      "b3": {
+        "repetitions": 20,
+        "minimum_seconds": 0.000683707999996841,
+        "median_seconds": 0.0008017560003281687,
+        "mean_seconds": 0.0008678162999785855
+      },
+      "speedup": 166.7542032058226,
+      "b4_peak_tracemalloc_bytes": 3344,
+      "b3_peak_tracemalloc_bytes": 341704,
+      "estimated_max_block_temporary_bytes": 128000
+    },
+    {
+      "n_localizations": 200,
+      "b4": {
+        "repetitions": 3,
+        "minimum_seconds": 0.5342327529997419,
+        "median_seconds": 0.5457240359992284,
+        "mean_seconds": 0.5455993809997987
+      },
+      "b3": {
+        "repetitions": 20,
+        "minimum_seconds": 0.001830119999794988,
+        "median_seconds": 0.0018945905003420194,
+        "mean_seconds": 0.001990957100133528
+      },
+      "speedup": 288.0432662893179,
+      "b4_peak_tracemalloc_bytes": 5744,
+      "b3_peak_tracemalloc_bytes": 546504,
+      "estimated_max_block_temporary_bytes": 256000
+    },
+    {
+      "n_localizations": 400,
+      "b4": {
+        "repetitions": 3,
+        "minimum_seconds": 1.9726707090012496,
+        "median_seconds": 2.0012740830006805,
+        "mean_seconds": 2.011052946001049
+      },
+      "b3": {
+        "repetitions": 20,
+        "minimum_seconds": 0.010334911001336877,
+        "median_seconds": 0.010926208999990195,
+        "mean_seconds": 0.012035534800179448
+      },
+      "speedup": 183.16271297780196,
+      "b4_peak_tracemalloc_bytes": 10544,
+      "b3_peak_tracemalloc_bytes": 956200,
+      "estimated_max_block_temporary_bytes": 512000
+    },
+    {
+      "n_localizations": 800,
+      "b4": {
+        "repetitions": 3,
+        "minimum_seconds": 7.412840146000235,
+        "median_seconds": 8.014907413000401,
+        "mean_seconds": 7.902609670333429
+      },
+      "b3": {
+        "repetitions": 10,
+        "minimum_seconds": 0.033880140999826835,
+        "median_seconds": 0.03564718149937107,
+        "mean_seconds": 0.03718910759998835
+      },
+      "speedup": 224.83986323411878,
+      "b4_peak_tracemalloc_bytes": 20144,
+      "b3_peak_tracemalloc_bytes": 1883944,
+      "estimated_max_block_temporary_bytes": 1024000
+    },
+    {
+      "n_localizations": 1600,
+      "b4": {
+        "repetitions": 1,
+        "minimum_seconds": 31.5596199419997,
+        "median_seconds": 31.5596199419997,
+        "mean_seconds": 31.5596199419997
+      },
+      "b3": {
+        "repetitions": 5,
+        "minimum_seconds": 0.14938184699894919,
+        "median_seconds": 0.1619469349989231,
+        "mean_seconds": 0.166246353400129
+      },
+      "speedup": 194.876302797639,
+      "b4_peak_tracemalloc_bytes": 39344,
+      "b3_peak_tracemalloc_bytes": 3765544,
+      "estimated_max_block_temporary_bytes": 2048000
+    }
+  ],
+  "block_size_benchmarks": [
+    {
+      "n_localizations": 400,
+      "block_size": 32,
+      "median_seconds": 0.007631805000528402,
+      "peak_tracemalloc_bytes": 956200
+    },
+    {
+      "n_localizations": 400,
+      "block_size": 64,
+      "median_seconds": 0.007594613500259584,
+      "peak_tracemalloc_bytes": 1877544
+    },
+    {
+      "n_localizations": 400,
+      "block_size": 128,
+      "median_seconds": 0.029805901499457832,
+      "peak_tracemalloc_bytes": 3746312
+    },
+    {
+      "n_localizations": 400,
+      "block_size": 256,
+      "median_seconds": 0.032808072000079846,
+      "peak_tracemalloc_bytes": 5742760
+    },
+    {
+      "n_localizations": 400,
+      "block_size": 512,
+      "median_seconds": 0.040065266000056,
+      "peak_tracemalloc_bytes": 8968392
+    },
+    {
+      "n_localizations": 800,
+      "block_size": 32,
+      "median_seconds": 0.03133609549877292,
+      "peak_tracemalloc_bytes": 1883944
+    },
+    {
+      "n_localizations": 800,
+      "block_size": 64,
+      "median_seconds": 0.03142597050009499,
+      "peak_tracemalloc_bytes": 3752744
+    },
+    {
+      "n_localizations": 800,
+      "block_size": 128,
+      "median_seconds": 0.06517536049977934,
+      "peak_tracemalloc_bytes": 7490344
+    },
+    {
+      "n_localizations": 800,
+      "block_size": 256,
+      "median_seconds": 0.0724457429987524,
+      "peak_tracemalloc_bytes": 14965544
+    },
+    {
+      "n_localizations": 800,
+      "block_size": 512,
+      "median_seconds": 0.06710726700021041,
+      "peak_tracemalloc_bytes": 22952392
+    }
+  ],
+  "empirical_scaling_exponents_50_to_800": {
+    "B.4": 1.9735994985113625,
+    "B.3": 1.8938984443998734
+  },
+  "mcmc_benchmarks": [
+    {
+      "n_localizations": 23,
+      "B.4": {
+        "median_total_seconds": 0.1327361719995679,
+        "median_density_seconds": 0.00633344599918928,
+        "median_eliminator_seconds": 0.10346186200149532,
+        "median_frame_cross_seconds": 0.03378546197200194,
+        "median_pairwise_seconds": 0.020846912997512845,
+        "median_likelihood_seconds": 0.0019275080012448598,
+        "peak_tracemalloc_bytes": 85416,
+        "representative_counts": {
+          "eliminator": 38,
+          "pairwise_coordinate": 836,
+          "frame_cross": 836,
+          "proposal": 38,
+          "likelihood": 6,
+          "density": 1,
+          "membership_scans": 0,
+          "candidate_evaluations": 0,
+          "probability_evaluations": 0,
+          "trajectory_merges": 0,
+          "repeated_coordinate_groups_local": 0,
+          "repeated_frame_groups_local": 760
+        }
+      },
+      "B.3": {
+        "median_total_seconds": 0.13521733900051913,
+        "median_density_seconds": 0.0001375090014335001,
+        "median_eliminator_seconds": 0.10745178300385305,
+        "median_frame_cross_seconds": 0.03420068494961015,
+        "median_pairwise_seconds": 0.022227162999115535,
+        "median_likelihood_seconds": 0.0022317710045172134,
+        "peak_tracemalloc_bytes": 52415,
+        "representative_counts": {
+          "eliminator": 38,
+          "pairwise_coordinate": 836,
+          "frame_cross": 836,
+          "proposal": 38,
+          "likelihood": 6,
+          "density": 1,
+          "membership_scans": 0,
+          "candidate_evaluations": 0,
+          "probability_evaluations": 0,
+          "trajectory_merges": 0,
+          "repeated_coordinate_groups_local": 0,
+          "repeated_frame_groups_local": 760
+        }
+      },
+      "whole_mcmc_speedup": 0.9816505263356667
+    },
+    {
+      "n_localizations": 50,
+      "B.4": {
+        "median_total_seconds": 0.22549857000012707,
+        "median_density_seconds": 0.02686297500076762,
+        "median_eliminator_seconds": 0.16090168899791024,
+        "median_frame_cross_seconds": 0.05972438100252475,
+        "median_pairwise_seconds": 0.04263137700036168,
+        "median_likelihood_seconds": 0.002220132000729791,
+        "peak_tracemalloc_bytes": 103434,
+        "representative_counts": {
+          "eliminator": 25,
+          "pairwise_coordinate": 1225,
+          "frame_cross": 1225,
+          "proposal": 25,
+          "likelihood": 6,
+          "density": 1,
+          "membership_scans": 0,
+          "candidate_evaluations": 0,
+          "probability_evaluations": 0,
+          "trajectory_merges": 0,
+          "repeated_coordinate_groups_local": 0,
+          "repeated_frame_groups_local": 1175
+        }
+      },
+      "B.3": {
+        "median_total_seconds": 0.16959721900093427,
+        "median_density_seconds": 0.00026554099895292893,
+        "median_eliminator_seconds": 0.12963230299646966,
+        "median_frame_cross_seconds": 0.04453848297816876,
+        "median_pairwise_seconds": 0.026381015026345267,
+        "median_likelihood_seconds": 0.0020070189966645557,
+        "peak_tracemalloc_bytes": 124110,
+        "representative_counts": {
+          "eliminator": 25,
+          "pairwise_coordinate": 1225,
+          "frame_cross": 1225,
+          "proposal": 25,
+          "likelihood": 6,
+          "density": 1,
+          "membership_scans": 0,
+          "candidate_evaluations": 0,
+          "probability_evaluations": 0,
+          "trajectory_merges": 0,
+          "repeated_coordinate_groups_local": 0,
+          "repeated_frame_groups_local": 1175
+        }
+      },
+      "whole_mcmc_speedup": 1.3296124271877645
+    },
+    {
+      "n_localizations": 100,
+      "B.4": {
+        "median_total_seconds": 0.33590186900073604,
+        "median_density_seconds": 0.10869075899972813,
+        "median_eliminator_seconds": 0.12734837799871457,
+        "median_frame_cross_seconds": 0.0455905460203212,
+        "median_pairwise_seconds": 0.0249320749699109,
+        "median_likelihood_seconds": 0.002257323001686018,
+        "peak_tracemalloc_bytes": 259264,
+        "representative_counts": {
+          "eliminator": 12,
+          "pairwise_coordinate": 1188,
+          "frame_cross": 1188,
+          "proposal": 12,
+          "likelihood": 6,
+          "density": 1,
+          "membership_scans": 0,
+          "candidate_evaluations": 0,
+          "probability_evaluations": 0,
+          "trajectory_merges": 0,
+          "repeated_coordinate_groups_local": 0,
+          "repeated_frame_groups_local": 1164
+        }
+      },
+      "B.3": {
+        "median_total_seconds": 0.2500637699995423,
+        "median_density_seconds": 0.0006958919984754175,
+        "median_eliminator_seconds": 0.1385300059992005,
+        "median_frame_cross_seconds": 0.0443922780068533,
+        "median_pairwise_seconds": 0.033600493961785105,
+        "median_likelihood_seconds": 0.002615520999825094,
+        "peak_tracemalloc_bytes": 326414,
+        "representative_counts": {
+          "eliminator": 12,
+          "pairwise_coordinate": 1188,
+          "frame_cross": 1188,
+          "proposal": 12,
+          "likelihood": 6,
+          "density": 1,
+          "membership_scans": 0,
+          "candidate_evaluations": 0,
+          "probability_evaluations": 0,
+          "trajectory_merges": 0,
+          "repeated_coordinate_groups_local": 0,
+          "repeated_frame_groups_local": 1164
+        }
+      },
+      "whole_mcmc_speedup": 1.343264836011034
+    },
+    {
+      "n_localizations": 200,
+      "B.4": {
+        "median_total_seconds": 1.180029013999956,
+        "median_density_seconds": 0.4449757830007002,
+        "median_eliminator_seconds": 0.35767659599878243,
+        "median_frame_cross_seconds": 0.11094638902068255,
+        "median_pairwise_seconds": 0.06751059298767359,
+        "median_likelihood_seconds": 0.003686748999825795,
+        "peak_tracemalloc_bytes": 833523,
+        "representative_counts": {
+          "eliminator": 13,
+          "pairwise_coordinate": 2587,
+          "frame_cross": 2587,
+          "proposal": 13,
+          "likelihood": 6,
+          "density": 1,
+          "membership_scans": 0,
+          "candidate_evaluations": 0,
+          "probability_evaluations": 0,
+          "trajectory_merges": 0,
+          "repeated_coordinate_groups_local": 0,
+          "repeated_frame_groups_local": 2561
+        }
+      },
+      "B.3": {
+        "median_total_seconds": 0.7452742270015733,
+        "median_density_seconds": 0.0021881419997953344,
+        "median_eliminator_seconds": 0.3386465000003227,
+        "median_frame_cross_seconds": 0.10322308599825192,
+        "median_pairwise_seconds": 0.06188135905722447,
+        "median_likelihood_seconds": 0.0035681930003192974,
+        "peak_tracemalloc_bytes": 815044,
+        "representative_counts": {
+          "eliminator": 13,
+          "pairwise_coordinate": 2587,
+          "frame_cross": 2587,
+          "proposal": 13,
+          "likelihood": 6,
+          "density": 1,
+          "membership_scans": 0,
+          "candidate_evaluations": 0,
+          "probability_evaluations": 0,
+          "trajectory_merges": 0,
+          "repeated_coordinate_groups_local": 0,
+          "repeated_frame_groups_local": 2561
+        }
+      },
+      "whole_mcmc_speedup": 1.5833487476784367
+    }
+  ],
+  "ckdtree_used": false,
+  "total_benchmark_runtime_seconds": 327.530457148001
+}
